@@ -246,6 +246,10 @@ module.exports = {
     },
     {
       type: 'doc',
+      id: 'otlp-http-enable-cors'
+    },
+    {
+      type: 'doc',
       id: 'userguide/exceptions',
     },
     {
@@ -277,7 +281,7 @@ module.exports = {
         'tutorial/opentelemetry-binary-usage-in-virtual-machine',
         'tutorial/setting-up-tls-for-signoz',
         'tutorial/setting-up-sso-saml-with-keycloak',
-        'tutorial/writing-clickhouse-queries-in-dashboard'
+        'tutorial/writing-clickhouse-queries-in-dashboard',
       ],
     },
     {
