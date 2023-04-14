@@ -9,7 +9,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
@@ -43,6 +44,14 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.3.1",
     "@tsconfig/docusaurus": "^1.0.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "2.8.7",
     "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,json}": [
+      "prettier --write \"src/**/*.{ts,tsx,js,jsx,css}\""
+    ]
   }
 }
