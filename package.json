@@ -1,5 +1,6 @@
 {
-  "name": "documentation",
+  "name": "signoz-documentation",
+  "git": "https://github.com/SigNoz/signoz.io/",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +11,8 @@
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "lint-staged --relative"
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
