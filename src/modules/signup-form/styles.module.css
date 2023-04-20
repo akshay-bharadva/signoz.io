@@ -1,9 +1,18 @@
+.footerContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 4rem;
+  border-bottom: 2px solid;
+  padding-bottom: 2rem;
+}
 .subscribeForm {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }
 .newsletterInput {
   color: var(--ifm-color-black);
@@ -26,12 +35,11 @@
   font-size: 1rem;
 }
 .submitBtn {
-  background: #b65037;
   font-size: 1rem;
   color: var(--ifm-color-white);
   font-family: "Inter", sans-serif;
-  max-width: 300px;
-  width: 100%;
+  /* max-width: 300px; */
+  /* width: 100%; */
   white-space: normal;
   height: 38px;
   align-items: center;
@@ -66,8 +74,16 @@
   font-size: 1rem;
 }
 @media (max-width: 768px) {
+  .footerContainer{
+    flex-direction: column;
+    margin: 1rem 0rem;
+  }
   .subscribeForm {
     flex-direction: column;
+  }
+  .submitBtn {
+    max-width: 300px;
+    width: 100%;
   }
   .newsletterInput {
     margin: .625rem 0 !important;

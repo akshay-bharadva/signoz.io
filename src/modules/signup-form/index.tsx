@@ -7,6 +7,7 @@
 
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import NavbarLogo from "../../theme/Navbar/Logo";
 
 const DOMAIN = "app.loops.so";
 
@@ -20,7 +21,8 @@ const formStates = [INIT, SUBMITTING, ERROR, SUCCESS] as const;
 const formStyles = {
   id: "cl8osdvv7459609la3ahy4uzo",
   placeholderText: "you@example.com",
-  buttonText: "Subscribe to our newsletter",
+  // buttonText: "Subscribe to our newsletter",
+  buttonText: "Subscribe",
   successMessage: "Thanks! We'll be in touch!",
   userGroup: "",
 };
@@ -138,6 +140,10 @@ export default function SignUpFormReact() {
     default:
       return (
         <>
+        <div className="container">
+
+        <div className={styles.footerContainer}>
+        <NavbarLogo/>
           <form onSubmit={handleSubmit} className={styles.subscribeForm}>
             <input
               type="text"
@@ -147,9 +153,11 @@ export default function SignUpFormReact() {
               onChange={(e) => setEmail(e.target.value)}
               required={true}
               className={styles.newsletterInput}
-            />
+              />
             <SignUpFormButton />
           </form>
+              </div>
+        </div>
         </>
       );
   }
@@ -174,7 +182,7 @@ export default function SignUpFormReact() {
     return (
       <button
         type="submit"
-        className={styles.submitBtn}
+        className={`${styles.submitBtn} button button--primary`}
       >
         {formState === SUBMITTING ? "Please wait..." : formStyles.buttonText}
       </button>
