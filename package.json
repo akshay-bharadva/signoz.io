@@ -11,8 +11,8 @@
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "prepare": "husky install",
-    "precommit": "lint-staged --relative"
+    "postinstall": "husky install",
+    "format": "prettier --write \"./src/**/*.{ts,tsx,js,jsx,css}\""
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
@@ -53,14 +53,8 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.1",
+    "husky": "^8.0.0",
     "prettier": "2.8.7",
     "typescript": "^5.0.4"
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx,js,jsx,json}": [
-      "prettier --write \"src/**/*.{ts,tsx,js,jsx,css}\""
-    ]
   }
 }
