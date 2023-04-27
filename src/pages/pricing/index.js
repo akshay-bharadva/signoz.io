@@ -44,8 +44,8 @@ function pricingTest() {
                   className={`card__header ${styles.card__header}`}
                 >
                   <div>
-                    <h3>Team</h3>
-                    <p>For teams that need high-performing applications</p>
+                    <h3>Teams</h3>
+                    <p>For teams that need high-performing applications.</p>
                   </div>
                   <div className={styles.priceCta}>
                     <div className={styles.priceCtaDesc}>
@@ -58,6 +58,7 @@ function pricingTest() {
                     </div>
                     <div>
                       <a
+                        id="btn-pricing-signoz-cloud-1"
                         className="button button--primary"
                         target="_blank"
                         href="https://forms.gle/yYSkntXRRPU3MHRL7"
@@ -107,15 +108,10 @@ function pricingTest() {
                     <div>
                       <span>Managed by SigNoz in your cloud</span>
                       <span>
-                        <WrongSVG />
+                        <RightSVG />
                       </span>
                     </div>
-                    <div>
-                      <span>Single Tenant</span>
-                      <span>
-                        <WrongSVG />
-                      </span>
-                    </div>
+                    
                   </div>
                   <hr />
                   <div
@@ -164,6 +160,7 @@ function pricingTest() {
                   className={`card__footer ${styles.card__footer}`}
                 >
                   <a
+                    id="btn-pricing-signoz-cloud-2"
                     className="button button--primary"
                     target="_blank"
                     href="https://forms.gle/yYSkntXRRPU3MHRL7"
@@ -184,27 +181,27 @@ function pricingTest() {
                   <div>
                     <h3>Enterprise</h3>
                     <p>
-                      With deployment options, security and compliance features
-                      and awesome support
+                      For at-scale orgs with advanced security, compliance and support needs.
                     </p>
                   </div>
                   <div className={styles.priceCta}>
                     <div className={styles.priceCtaDesc}>
-                      <span>starts at just</span>
-                      <span
+                    <span>Flexible Pricing for scale</span>
+                    {/* <span
                         className={`${styles.price} highlight`}
                       >
-                        $999/month
-                      </span>
+                        Custom Pricing
+                      </span> */}
                     </div>
                     <div>
                       <a
+                        id="btn-pricing-signoz-enterprise-1"
                         className="button button--primary"
                         target="_blank"
                         href="https://forms.gle/zxCEoSbnnPv6mSX57"
                         onClick={() => handleClick("SelfHostedEnterprise")}
                       >
-                        Contact Us
+                        Get Demo
                       </a>
                     </div>
                   </div>
@@ -215,6 +212,9 @@ function pricingTest() {
                     className={`${styles.pricingDetails} ${styles.packageDetailBlock}`}
                   >
                     <h4 className={styles.packageDetailTitle}>Pricing</h4>
+                    <div>
+                      
+                    </div>
                     <div>
                       <span>Custom Pricing</span>
                       <span>
@@ -243,12 +243,6 @@ function pricingTest() {
                     </div>
                     <div>
                       <span>Managed by SigNoz in your cloud</span>
-                      <span>
-                        <RightSVG />
-                      </span>
-                    </div>
-                    <div>
-                      <span>Single Tenant</span>
                       <span>
                         <RightSVG />
                       </span>
@@ -331,12 +325,13 @@ function pricingTest() {
                   className={`card__footer ${styles.card__footer}`}
                 >
                   <a
+                    id="btn-pricing-signoz-enterprise-2"
                     className="button button--primary"
                     target="_blank"
                     href="https://forms.gle/zxCEoSbnnPv6mSX57"
                     onClick={() => handleClick("SelfHostedEnterprise")}
                   >
-                    Contact Us
+                    Get Demo
                   </a>
                 </div>
               </div>
