@@ -221,6 +221,3 @@
     height: auto;
   }
 }
-html[data-theme="light"] .pricing .card {
-  box-shadow: var(--ifm-box-shadow-dark);
-}

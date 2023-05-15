@@ -23,7 +23,7 @@ export const TalkToExpert = () => {
               paddingLeft: "10px !important",
               paddingRight: "10px !important",
             }}
-            className="button button--primary"
+            className={`button button--primary ${styles.ctaBtn}`}
             href={TALK_TO_EXPERT_URL}
           >
             Talk to an Expert

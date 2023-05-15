@@ -39,6 +39,10 @@
   margin: 0 1rem 1rem;
   list-style-type: none;
 }
+.expert .ctaBtn {
+  font-family: var(--ifm-font-family-work-sans);
+  font-size: 1rem;
+}
 
 @media (max-width: 768px) {
   .expert {

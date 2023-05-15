@@ -10,6 +10,7 @@ import { UserReview } from "../../modules/user-review";
 import { TrySigNozCTA } from "../../modules/try-signoz-cta";
 import { DataProtection } from "../../modules/data-protection";
 import styles from "./styles.module.css";
+import { SignUp } from "../../modules/signup-form";
 
 function Pricing() {
   return (
@@ -385,6 +386,7 @@ function Pricing() {
 
       {/* Give a Try CTA */}
       <TrySigNozCTA />
+      <SignUp/>
     </Layout>
   );
 }

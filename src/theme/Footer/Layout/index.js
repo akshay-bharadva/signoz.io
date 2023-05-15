@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import SignUpForm from '../../../modules/signup-form';
+import SignUpForm from '../../../modules/newsletter-form';
 import styles from "./styles.module.css"
 
 export default function FooterLayout({style, links, logo, copyright}) {

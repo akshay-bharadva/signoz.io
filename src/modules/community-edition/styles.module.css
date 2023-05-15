@@ -38,6 +38,8 @@
   margin: 0.375rem;
   padding-left: .625rem;
   padding-right: .625rem;
+  font-family: var(--ifm-font-family-work-sans);
+  font-size: 1rem;
 }
 
 .options ul {

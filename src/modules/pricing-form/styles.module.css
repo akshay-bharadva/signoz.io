@@ -133,17 +133,3 @@
     height: 0.75rem;
   }
 }
-html[data-theme="light"] .textInput {
-  background: var(--ifm-color-white);
-  border: 1px solid var(--ifm-color-gray-dark);
-  color: var(--ifm-color-gray-darkest);
-}
-html[data-theme="light"] .textInputLine {
-  border-bottom: 1px solid var(--ifm-color-gray-dark);
-}
-html[data-theme="light"] .textInput:focus {
-  border-color: var(--ifm-color-primary);
-}
-html[data-theme="light"] .textInputLine:focus {
-  border-color: var(--ifm-color-primary);
-}
