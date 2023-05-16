@@ -1,14 +1,14 @@
-.cta {
+.signUp {
   display: flex;
   width: 100%;
   color: var(--ifm-color-black);
 }
-.cta .contentWrapper {
+.signUp .contentWrapper {
   background: var(--ifm-color-salmon-lightest);
   border-radius: 6px;
   padding: 2rem 2rem;
 }
-.cta .tagline {
+.signUp .tagline {
   font-family: var(--ifm-font-family-work-sans);
   font-style: normal;
   font-weight: 700;
@@ -17,7 +17,7 @@
   letter-spacing: var(--ifm-font-letter-spacing);
   margin-bottom: 1rem;
 }
-.cta .desc {
+.signUp .desc {
   font-family: var(--ifm-font-family-work-sans);
   font-weight: 600;
   font-size: 1rem;
@@ -25,45 +25,45 @@
   letter-spacing: var(--ifm-font-letter-spacing);
   margin-bottom: 1rem;
 }
-.cta .ctaBtn {
+.signUp .ctaBtn {
   font-family: var(--ifm-font-family-work-sans);
   padding: 0.2rem 1rem;
 }
 
 @media (max-width: 768px) {
-  .cta {
+  .signUp {
     margin: 2.5rem 0;
   }
-  .cta .contentWrapper {
+  .signUp .contentWrapper {
     padding: 1.5rem 1.5rem;
   }
-  .cta .tagline {
+  .signUp .tagline {
     font-size: 1.5rem;
   }
-  .cta .contentWrapper {
+  .signUp .contentWrapper {
     padding: 1.8rem 2rem;
   }
 }
 @media (max-width: 1024px) {
-  .cta .contentWrapper {
+  .signUp .contentWrapper {
     width: 100%;
   }
-  .cta .tagline {
+  .signUp .tagline {
     font-size: 1.1rem;
   }
-  .cta .desc {
+  .signUp .desc {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 426px) {
-  .cta .tagline {
+  .signUp .tagline {
     font-size: 1.05rem;
   }
-  .cta .desc {
+  .signUp .desc {
     font-size: 0.8rem;
   }
-  .cta .contentWrapper {
+  .signUp .contentWrapper {
     padding: 1rem;
   }
 }

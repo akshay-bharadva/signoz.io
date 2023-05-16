@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 export const SignUp = () => {
   return (
-    <section className={styles.cta}>
+    <section className={styles.signUp}>
         <div className={styles.contentWrapper}>
           <h3 className={styles.tagline}>
             OpenTelemetry-Native <span className="highlight">Metrics</span>,{" "}
