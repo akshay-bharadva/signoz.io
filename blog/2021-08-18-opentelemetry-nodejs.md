@@ -21,7 +21,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/opentelemetry/nodejs/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 import VersionPin from '../docs/shared/nodejs-version-pin.md'
 
 

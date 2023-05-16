@@ -17,7 +17,7 @@ keywords:
    <title>Docker Log Rotation Configuration Guide | SigNoz</title>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 import LogsPerf from '../docs/shared/logs-perf-cta.md'
 
 It is essential to configure log rotation for Docker containers. Log rotation is not performed by default, and if it’s not configured, logs on the Docker host can build up and eat up disk space. This guide will teach us how to set up Docker log rotation.

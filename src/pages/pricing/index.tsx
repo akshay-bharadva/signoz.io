@@ -386,7 +386,7 @@ function Pricing() {
 
       {/* Give a Try CTA */}
       <TrySigNozCTA />
-      <SignUp/>
+
     </Layout>
   );
 }

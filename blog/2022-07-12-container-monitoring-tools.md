@@ -19,7 +19,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/container-monitoring-tools/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 One of the easiest ways to see if the application running in our nodes is in an optimized state or not is by monitoring them. It is the last yet critical stage of any software development lifecycle. It opens up many possible improvements in your application, networking, IT automation, and other miscellaneous configurations. As we move towards microservice architecture, containerization and orchestration tools are rising.
 

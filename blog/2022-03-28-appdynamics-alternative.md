@@ -18,7 +18,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/appdynamics-alternative/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 If you're looking for an open-source alternative to AppDynamics, then you're at the right place. SigNoz is a perfect open-source alternative to AppDynamics. SigNoz provides a unified UI for metrics, traces and logs with advanced tagging and filtering capabilities.
 

@@ -22,7 +22,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/pricing-comparison-signoz-vs-datadog-vs-newrelic-vs-grafana/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 Democratize observability for engineering teams of all sizes!
 

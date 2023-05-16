@@ -21,7 +21,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/kubectl-logs/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 import LogsPerf from '../docs/shared/logs-perf-cta.md'
 
 Information about the containers and pods on your cluster may be obtained using the `kubectl logs` command. These logs allow you to know the performance of your applications, whether they are failing or healthy, and are particularly useful for debugging and troubleshooting purposes.

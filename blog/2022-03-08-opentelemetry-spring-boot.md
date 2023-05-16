@@ -18,7 +18,7 @@ keywords:
 ---
 import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 <head>
   <link rel="canonical" href="https://signoz.io/blog/opentelemetry-spring-boot/"/>

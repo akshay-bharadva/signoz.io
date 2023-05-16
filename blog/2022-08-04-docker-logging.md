@@ -19,7 +19,7 @@ keywords:
 </head>
 
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 import LogsPerf from '../docs/shared/logs-perf-cta.md'
 
 Log analysis is a very powerful feature for an application when it comes to debugging and finding out which flow is working properly in the application and which is not. Log management helps the DevOps team debug and troubleshoot issues faster, making it easier to identify patterns, spot bugs, and ensure they don’t come back to bite you!

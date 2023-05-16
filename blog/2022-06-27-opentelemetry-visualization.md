@@ -24,7 +24,7 @@ keywords:
   <title>Getting started with OpenTelemetry visualization</title>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 OpenTelemetry is a Cloud Native Computing Foundation(<a href = "https://www.cncf.io/" rel="noopener noreferrer nofollow" target="_blank">CNCF</a>) project aimed at standardizing the way we instrument applications for generating telemetry data(logs, metrics, and traces). However, OpenTelemetry does not provide storage and visualization for the collected telemetry data. For OpenTelemetry visualization, you need to use a backend that can ingest the collected data and provide a web UI to visualize it.
 

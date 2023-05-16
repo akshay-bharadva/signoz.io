@@ -18,7 +18,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/N+1-query-distributed-tracing/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 N+1 query problem is a problem in database retrieval where the related entities of an object are queried individually from a database, leading to O(n) queries where n is the number of related entities of the object.
 

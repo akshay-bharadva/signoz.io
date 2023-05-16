@@ -20,7 +20,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/mysql-monitoring-tools/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 Database monitoring is a critical component in your application performance monitoring. Apart from application code issues, database issues are one of the most common reasons for a bad user experience. MySQL is one of the most popular open-source DBMS that businesses have widely adopted.
 

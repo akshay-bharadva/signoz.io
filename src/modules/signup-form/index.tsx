@@ -5,7 +5,6 @@ import styles from "./styles.module.css";
 export const SignUp = () => {
   return (
     <section className={styles.cta}>
-      <div className="container">
         <div className={styles.contentWrapper}>
           <h3 className={styles.tagline}>
             OpenTelemetry-Native <span className="highlight">Metrics</span>,{" "}
@@ -26,7 +25,6 @@ export const SignUp = () => {
             Try SigNoz
           </Link>
         </div>
-      </div>
     </section>
   );
 };

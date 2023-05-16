@@ -17,7 +17,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/openmetrics-vs-opentelemetry/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 OpenMetrics and OpenTelemetry are popular standards for instrumenting cloud-native applications. Both projects are part of the <a href = "https://cncf.io/" rel="noopener noreferrer nofollow" target="_blank">Cloud Native Computing Foundation (CNCF)</a> and aim to simplify how we generate, collect and monitor services in a modern cloud-native distributed application environment.
 

@@ -25,7 +25,7 @@ keywords:
   <title>An open source OpenTelemetry APM | SigNoz</title>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 OpenTelemetry is a Cloud Native Computing Foundation(<a href = "https://www.cncf.io/" rel="noopener noreferrer nofollow" target="_blank">CNCF</a>) project aimed at standardizing the way we instrument applications for generating telemetry data(logs, metrics, and traces). However, OpenTelemetry does not provide storage and visualization for the collected telemetry data. An APM that can ingest telemetry data collected by OpenTelemetry can help you set up a robust observability stack.
 

@@ -22,7 +22,7 @@ keywords:
   <link rel="canonical" href="https://signoz.io/blog/kubectl-top/"/>
 </head>
 
-import SignUps from '../docs/shared/sign-ups.md'
+import SignUps from '../docs/shared/sign-ups.mdx'
 
 
 `Kubectl Top` command can be used to retrieve snapshots of resource utilization of pods or nodes in your Kubernetes cluster. Resource utilization is an important thing to monitor for Kubernetes cluster owners. In order to monitor resource utilization, you can keep track of things like CPU, memory, and storage.
