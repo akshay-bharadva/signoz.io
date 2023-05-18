@@ -134,6 +134,10 @@ const config = {
               label: "Contributing",
               to: "docs/contributing",
             },
+            {
+              label: "Knowledge Base",
+              href: "https://knowledgebase.signoz.io/kb",
+            },
           ],
         },
         {
@@ -170,7 +174,7 @@ const config = {
           items: [
             {
               label: "Careers",
-              href: "https://www.ycombinator.com/companies/signoz/jobs",
+              href: "https://www.ycombinator.com/companies/signoz/jobs/",
             },
             {
               label: "Technical Writer Program",

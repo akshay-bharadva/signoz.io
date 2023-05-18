@@ -10,7 +10,7 @@ import { UserReview } from "../../modules/user-review";
 import { TrySigNozCTA } from "../../modules/try-signoz-cta";
 import { DataProtection } from "../../modules/data-protection";
 import styles from "./styles.module.css";
-import { SignUp } from "../../modules/signup-form";
+import { CostComparison } from "../../modules/cost-comparison";
 
 function Pricing() {
   return (
@@ -19,10 +19,11 @@ function Pricing() {
         <div className={`container ${styles.pricingContainer}`}>
           <h2 className={styles.title}>Transparent & Predictable Pricing</h2>
           <p className={styles.subtitle}>
-            OpenTelemetry-Native <span className="highlight">Metrics</span>,{" "}
+            {/* OpenTelemetry-Native <span className="highlight">Metrics</span>,{" "}
             <span className="highlight">Logs</span>, and{" "}
             <span className="highlight">Traces</span> in{" "}
-            <span className="highlight">single</span> pane of glass
+            <span className="highlight">single</span> pane of glass */}
+            Tired of unpredictable pricing and complex billing structure? Save up to <a href="https://signoz.io/blog/pricing-comparison-signoz-vs-datadog-vs-newrelic-vs-grafana/?utm_source=pricing_page&utm_medium=website"><u>86% on your Datadog bill</u></a> with SigNoz.
           </p>
           <div className={`row ${styles.pricingRow}`}>
             <div className={"col col--6 margin-vert--md"}>
@@ -355,6 +356,9 @@ function Pricing() {
 
       {/* Companies Logo */}
       <ShowCompanyLogos />
+      
+      {/* Cost Comparison Graph */}
+      <CostComparison />
 
       {/* Data protection */}
       <DataProtection />
