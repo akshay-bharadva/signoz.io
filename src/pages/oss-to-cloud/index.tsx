@@ -55,7 +55,7 @@ const OSS_TO_CLOUD_DATA = {
   ],
 };
 
-function Teams() {
+function OSSToCloud() {
   return (
     <Layout title="OSS to Cloud">
       <section className={styles.oss}>
@@ -63,9 +63,9 @@ function Teams() {
           title={OSS_TO_CLOUD_DATA.TITLE}
           desc={OSS_TO_CLOUD_DATA.DESC}
         />
-        <div className={styles.teamSection}>
-          <div className={`container ${styles.teamContainer}`}>
-            <div className={`row ${styles.teamRow}`}>
+        <div className={styles.ossSection}>
+          <div className={`container ${styles.ossContainer}`}>
+            <div className={`row ${styles.ossRow}`}>
               <div className={"col col--6 margin-vert--md"}>
                 <div className={styles.featuresContainer}>
                   {OSS_TO_CLOUD_DATA.FEATURE_POINTS.map((feature, idx) => (
@@ -79,7 +79,7 @@ function Teams() {
                 </div>
               </div>
               <div className={"col col--6 margin-vert--md"}>
-                <div className={`card ${styles.teamCard}`}>
+                <div className={`card ${styles.ossCard}`}>
                   <div className="card__body">
                     <HubspotProvider>
                       <PricingForm
@@ -98,4 +98,4 @@ function Teams() {
   );
 }
 
-export default Teams;
+export default OSSToCloud;

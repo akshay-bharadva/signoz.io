@@ -1,17 +1,17 @@
 /* Team Section */
 .oss {
 }
-.oss .teamSection {
+.oss .ossSection {
   background: var(--ifm-color-white);
 }
-.oss .teamRow {
+.oss .ossRow {
   margin-top: -8rem;
 }
-.oss .teamContainer {
+.oss .ossContainer {
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
-.oss .teamCard {
+.oss .ossCard {
   padding: 2.5rem;
   margin: 0 2rem;
   background: var(--ifm-color-white);
@@ -46,7 +46,7 @@
   .oss .featureWrapper {
     flex-direction: column;
   }
-  .oss .teamCard {
+  .oss .ossCard {
     padding: 0.3rem;
   }
 }
@@ -61,22 +61,22 @@
   .oss .featureDesc {
     font-size: 0.9rem;
   }
-  .oss .teamCard {
+  .oss .ossCard {
     margin: 0;
     padding: 0.5rem;
   }
 }
 @media (max-width: 996px) {
-  .oss .teamRow {
+  .oss .ossRow {
     flex-direction: column-reverse;
   }
 }
 @media (max-width: 1024px) {
-  .oss .teamCard {
+  .oss .ossCard {
     padding: 1.5rem;
     margin: 0 1rem;
   }
-  .oss .teamContainer {
+  .oss .ossContainer {
     padding-top: 3rem;
     padding-bottom: 1rem;
   }
