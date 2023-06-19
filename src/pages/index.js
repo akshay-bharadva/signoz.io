@@ -947,10 +947,10 @@ function Home() {
                     <Link
                       className="button button--primary margin--md "
                       //  onClick={setShowTrySignozModal.bind(this,true)}>
-                      href={"/teams/?utm_source=website&utm_medium=home_page_bottom&utm_campaign=try_cloud"}
+                      href={"/teams/"}
                       id="btn-get-started-homepage-bottom"
                     >
-                      Get started - free
+                      Try SigNoz Cloud
 
                     </Link>
                     <Link

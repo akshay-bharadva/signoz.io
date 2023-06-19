@@ -36,11 +36,11 @@ export const Header = () => {
               }}
               className="button button--primary "
               // onClick={setShowTrySignozModal.bind(this,true)}
-              href={"/teams/?utm_source=website&utm_medium=home_page_hero&utm_campaign=try_cloud"}
+              href={"/teams/"}
               //   onClick={getStartedClicked}
               id="btn-get-started-homepage-hero"
             >
-              Get started - free
+              Try SigNoz Cloud
             </Link>
             <Link
               style={{

@@ -67,11 +67,11 @@ export default function NavbarContent() {
             className="button button--primary "
             //  onClick={setShowTrySignozModal.bind(this,true)}>
             href={
-              "/teams/?utm_source=website&utm_medium=navbar&utm_campaign=try_cloud"
+              "/teams/"
             }
             id="btn-get-started-website-navbar"
           >
-            Get started - free
+            Try SigNoz Cloud
           </Link>
           <NavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
