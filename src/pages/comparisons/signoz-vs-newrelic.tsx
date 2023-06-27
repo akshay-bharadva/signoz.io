@@ -16,6 +16,8 @@ function SigNozVSNewRelic() {
           title={COMPARISON_DATA.HERO.TITLE}
           desc={COMPARISON_DATA.HERO.DESC}
           billForComparison={COMPARISON_DATA.HERO.BILL_FOR_COMPARISON}
+          trySigNozCloud={COMPARISON_DATA.HERO.TRY_SIGNOZ_CLOUD}
+          selfHost={COMPARISON_DATA.HERO.SELF_HOST}
         />
         <Migration
           title={COMPARISON_DATA.MIGRATE.TITLE}
@@ -51,7 +53,21 @@ const COMPARISON_DATA = {
         .
       </>
     ),
-    BILL_FOR_COMPARISON: "/comparisons/newrelic-savings/",
+    BILL_FOR_COMPARISON: {
+      path: "/comparisons/newrelic-savings/",
+      className: "button--primary",
+      isVisible: true,
+    },
+    TRY_SIGNOZ_CLOUD: {
+      path: "/teams/",
+      className: "button--outline button--secondary",
+      isVisible: true,
+    },
+    SELF_HOST: {
+      path: "/comparisons/newrelic-savings/",
+      className: "button--outline button--secondary",
+      isVisible: false,
+    },
   },
   MIGRATE: {
     TITLE: <>Migrate from New Relic to SigNoz with ease.</>,
@@ -218,8 +234,7 @@ const COMPARISON_DATA = {
         sideHeader: "Host Yourself",
         isAvailableInSignoz: true,
         isAvailableInOther: false,
-        signozExtraDetail:
-          "Managed self-hosting also available",
+        signozExtraDetail: "Managed self-hosting also available",
       },
     ],
   },
