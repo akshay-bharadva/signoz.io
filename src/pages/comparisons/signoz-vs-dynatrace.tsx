@@ -26,6 +26,7 @@ function SigNozVSDynatrace() {
         <TopReasons
           title={COMPARISON_DATA.REASON_TITLE}
           reasons={COMPARISON_DATA.REASONS}
+          withElonMuskReason
         />
         <ComparisonGrid comparisonData={COMPARISON_DATA.COMPARISON} />
         <GetStarted data={COMPARISON_DATA.MIGRATION_SUPPORT} />
