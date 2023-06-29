@@ -149,6 +149,9 @@
   .reasonElonMusk .reasonImageContainer {
     margin-bottom: 2rem;
   }
+  .reasonsPoints {
+    margin: 0 2rem 5rem;
+  }
   .svsdReasonContainer {
     padding: 3rem 0;
   }
@@ -173,6 +176,15 @@
     width: 90%;
     font-size: 1.2rem;
     margin: 0 auto 2rem;
+  }
+  .reasonsPoints {
+    margin: 0 0.5rem 5rem;
+  }
+  .reasonsPointTitle {
+    font-size: 1.8rem;
+  }
+  .reasonMainPointTitle {
+    font-size: 1.5rem;
   }
   .reasonElonMusk .reasonImageContainer {
     margin-bottom: 4rem;

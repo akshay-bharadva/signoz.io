@@ -29,7 +29,10 @@ function SigNozVSNewRelic() {
           withElonMuskReason
         />
         <ComparisonGrid comparisonData={COMPARISON_DATA.COMPARISON} />
-        <GetStarted data={COMPARISON_DATA.MIGRATION_SUPPORT} />
+        <GetStarted
+          withMigrationSupport
+          data={COMPARISON_DATA.MIGRATION_SUPPORT}
+        />
       </ComparisonLayout>
     </Layout>
   );

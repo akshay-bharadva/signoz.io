@@ -29,7 +29,11 @@ function SigNozVSDatadog() {
           withElonMuskReason
         />
         <ComparisonGrid comparisonData={COMPARISON_DATA.COMPARISON} />
-        <GetStarted withHackerNews data={COMPARISON_DATA.MIGRATION_SUPPORT} />
+        <GetStarted
+          withHackerNews
+          withMigrationSupport
+          data={COMPARISON_DATA.MIGRATION_SUPPORT}
+        />
       </ComparisonLayout>
     </Layout>
   );

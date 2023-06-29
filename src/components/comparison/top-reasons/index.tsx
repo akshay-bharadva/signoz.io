@@ -23,10 +23,10 @@ const TopReasons = (props) => {
           {props.reasons.map(({ reason, reasonDesc }, idx) => {
             return (
               <React.Fragment key={idx + new Date().getSeconds()}>
-                <h4 className={styles.reasonTitle} >
+                <h4 className={styles.reasonTitle}>
                   {idx + 1}. {reason}
                 </h4>
-                <p className={styles.reasonDesc}>{reasonDesc}</p>
+                <div className={styles.reasonDesc}>{reasonDesc}</div>
               </React.Fragment>
             );
           })}
