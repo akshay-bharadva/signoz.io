@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import TopReasons from "../../components/comparison/top-reasons";
-import Migration from "../../components/comparison/migration";
 import Hero from "../../components/comparison/hero";
 import ComparisonGrid from "../../components/comparison/grid";
 import GetStarted from "../../components/comparison/get-started";
@@ -20,7 +19,6 @@ function SigNozVSGrafana() {
           trySigNozCloud={COMPARISON_DATA.HERO.TRY_SIGNOZ_CLOUD}
           selfHost={COMPARISON_DATA.HERO.SELF_HOST}
         />
-        {/* <Reasons /> */}
         <TopReasons
           points
           title={COMPARISON_DATA.REASON_TITLE}
@@ -32,7 +30,10 @@ function SigNozVSGrafana() {
           reasons={COMPARISON_DATA.REASONS}
         />
         <ShowCompanyLogos />
-        <GetStarted data={COMPARISON_DATA.MIGRATION_SUPPORT} />
+        <GetStarted
+          data={COMPARISON_DATA.MIGRATION_SUPPORT}
+          withMigrationSupport
+        />
       </ComparisonLayout>
     </Layout>
   );
@@ -61,7 +62,7 @@ const COMPARISON_DATA = {
       isVisible: true,
     },
     SELF_HOST: {
-      path: "/comparisons/newrelic-savings/",
+      path: "/docs/install/",
       className: "button--outline button--secondary",
       isVisible: true,
     },
@@ -192,7 +193,6 @@ const COMPARISON_DATA = {
         </>
       ),
     },
-
     {
       reason: <>SigNoz is OpenTelemetry-native</>,
       reasonDesc: (
@@ -212,7 +212,6 @@ const COMPARISON_DATA = {
         </>
       ),
     },
-
     {
       reason: (
         <>SigNoz uses columnar database for faster ingestion & aggregation</>
@@ -224,7 +223,12 @@ const COMPARISON_DATA = {
             database. Ingestion and aggregations are lightning-fast while
             providing best-in-class compression for economical storage. It was
             built to do analytical queries like Group By fast. Read more on{" "}
-            <Link href="/" className={"highlight"}>
+            <Link
+              href="https://clickhouse.com/docs/en/concepts/why-clickhouse-is-so-fast"
+              className={"highlight"}
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
               what makes ClickHouse so fast
             </Link>
             .
@@ -232,7 +236,6 @@ const COMPARISON_DATA = {
         </>
       ),
     },
-
     {
       reason: <>Loki was not built to index and query high-cardinality data</>,
       reasonDesc: (
@@ -243,11 +246,22 @@ const COMPARISON_DATA = {
           </p>
           <h3 className="highlight-secondary margin-vert--md">
             “As a Loki user or operator, your goal should be to use the fewest
-            labels possible to store your logs. (Source: Grafana)”
+            labels possible to store your logs. (Source:{" "}
+            <Link
+              href="https://grafana.com/blog/2020/08/27/the-concise-guide-to-labels-in-loki/"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <em>Grafana</em>
+            </Link>
+            )”
           </h3>
           <p>
             We did a{" "}
-            <Link className={"highlight"} href="/">
+            <Link
+              className={"highlight"}
+              href="/blog/logs-performance-benchmark/"
+            >
               logs performance benchmark
             </Link>{" "}
             of SigNoz with Elasticsearch and Loki. Below are our key findings
@@ -272,7 +286,6 @@ const COMPARISON_DATA = {
         </>
       ),
     },
-
     {
       reason: <>SigNoz is much easier to self-host</>,
       reasonDesc: (
@@ -281,7 +294,7 @@ const COMPARISON_DATA = {
           Grafana has multiple backends for different telemetry signals, it’s
           difficult to manage. With SigNoz, you only need to manage a single
           backend for a full-stack observability setup. We also provide{" "}
-          <Link href="/" className={"highlight"}>
+          <Link href="/pricing/" className={"highlight"}>
             managed self-host services
           </Link>
           .
@@ -291,5 +304,21 @@ const COMPARISON_DATA = {
   ],
   MIGRATION_SUPPORT: {
     HACKER_THREAD_TITLE: "",
+    TITLE: <>Still undecided? Let us help.</>,
+    DESC: (
+      <>
+        If you have concerns about whether SigNoz is a good fit or not, let us
+        chat.{" "}
+        <Link
+          href="https://calendly.com/ankit-nayan/signoz-demo"
+          className="highlight"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          Book a call
+        </Link>{" "}
+        with an expert and discuss all your questions in a one on one call.
+      </>
+    ),
   },
 };

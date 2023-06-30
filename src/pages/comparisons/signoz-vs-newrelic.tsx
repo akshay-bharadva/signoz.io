@@ -113,6 +113,8 @@ const COMPARISON_DATA = {
           <Link
             href="https://clickhouse.com/docs/en/concepts/why-clickhouse-is-so-fast"
             className="highlight"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
           >
             why is ClickHouse so fast
           </Link>

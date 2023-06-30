@@ -100,6 +100,8 @@ const COMPARISON_DATA = {
           <Link
             href="https://news.ycombinator.com/item?id=34540419"
             className="highlight"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
           >
             kill an OTel pull request
           </Link>
@@ -119,6 +121,8 @@ const COMPARISON_DATA = {
           <Link
             href="https://clickhouse.com/docs/en/concepts/why-clickhouse-is-so-fast"
             className={`highlight`}
+            rel="noopener noreferrer nofollow"
+            target="_blank"
           >
             why is ClickHouse so fast
           </Link>
@@ -251,6 +255,8 @@ const COMPARISON_DATA = {
         <Link
           href="https://news.ycombinator.com/item?id=35837330"
           className={`highlight`}
+          rel="noopener noreferrer nofollow"
+          target="_blank"
         >
           HackerNews thread.
         </Link>
