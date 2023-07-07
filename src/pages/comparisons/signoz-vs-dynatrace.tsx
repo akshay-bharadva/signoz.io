@@ -51,7 +51,7 @@ const COMPARISON_DATA = {
       </>
     ),
     BILL_FOR_COMPARISON: {
-      path: "/comparisons/newrelic-savings/",
+      path: "/comparisons/dynatrace-savings/",
       className: "button--primary",
       isVisible: false,
     },
@@ -61,7 +61,7 @@ const COMPARISON_DATA = {
       isVisible: true,
     },
     SELF_HOST: {
-      path: "/comparisons/newrelic-savings/",
+      path: "/docs/install/",
       className: "button--outline button--secondary",
       isVisible: true,
     },
@@ -72,7 +72,7 @@ const COMPARISON_DATA = {
       <>
         We provide support for migrating from Dynatrace to SigNoz.
         <br />
-        <Link href="/comparisons/migrate-from-newrelic/" className="highlight">
+        <Link href="/comparisons/migrate-from-dynatrace/" className="highlight">
           Request a migration support
         </Link>{" "}
         from one of our experts and get started with SigNoz quickly.
@@ -104,12 +104,21 @@ const COMPARISON_DATA = {
         <>
           SigNoz uses ClickHouse - a fast open source column-oriented database.
           Ingestion and aggregation are lightening fast, while providing
-          best-in-class compression for economical storage.
+          best-in-class compression for economical storage. Learn{" "}
+          <Link
+            href="https://clickhouse.com/docs/en/concepts/why-clickhouse-is-so-fast"
+            className="highlight"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            why is ClickHouse so fast
+          </Link>
+          .
         </>
       ),
     },
     {
-      FIGURE: "/img/reasons/new-relic-pricing-collaboration.png",
+      FIGURE: "/img/reasons/dynatrace-host-based-billing.png",
       TITLE: <>Dynatrace’s host-based billing is limiting for modern apps</>,
       DESC: (
         <>
@@ -117,10 +126,7 @@ const COMPARISON_DATA = {
           cloud-native environments that need on-demand scaling. SigNoz paid
           plans are based on the amount of data sent with rates that provides
           the best value for money.{" "}
-          <Link
-            href="/blog/pricing-comparison-signoz-vs-datadog-vs-newrelic-vs-grafana/#no-user-based-pricing-collaborate-seamlessly-with-signoz"
-            className="highlight"
-          >
+          <Link href="/teams/" className="highlight">
             Sign up
           </Link>{" "}
           for a free cloud trial to get started.
@@ -128,7 +134,7 @@ const COMPARISON_DATA = {
       ),
     },
     {
-      FIGURE: "/img/reasons/new-relic-bill-saving.png",
+      FIGURE: "/img/reasons/dynatrace-complex-ui.png",
       TITLE: <>Dynatrace has a complex UI, and a steep learning curve </>,
       DESC: (
         <>
@@ -144,7 +150,7 @@ const COMPARISON_DATA = {
       ),
     },
     {
-      FIGURE: "/img/reasons/we-provided-managed-self-hosted-option.png",
+      FIGURE: "/img/reasons/dynatrace-send-data-directly.png",
       TITLE: (
         <>
           Send data directly from applications without needing any host-based
@@ -246,7 +252,7 @@ const COMPARISON_DATA = {
     DESC: (
       <>
         We provide support for migrating from Dynatrace to SigNoz.{" "}
-        <Link href="/comparisons/migrate-from-newrelic/" className="highlight">
+        <Link href="/comparisons/migrate-from-dynatrace/" className="highlight">
           Request a migration support
         </Link>{" "}
         from one of our experts and get started with SigNoz quickly.
