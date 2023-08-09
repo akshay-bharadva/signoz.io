@@ -16,7 +16,7 @@ function ColumnLinkItem({item}) {
 }
 function Column({column}) {
   return (
-    <div className="col footer__col">
+    <div className="flex-col justify-start items-start gap-1 inline-flex">
       <div className="footer__title">{column.title}</div>
       <ul className="footer__items clean-list">
         {column.items.map((item, i) => (
@@ -28,7 +28,7 @@ function Column({column}) {
 }
 export default function FooterLinksMultiColumn({columns}) {
   return (
-    <div className="row footer__links">
+    <div className="flex justify-around">
       {columns.map((column, i) => (
         <Column key={i} column={column} />
       ))}

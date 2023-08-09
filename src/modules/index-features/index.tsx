@@ -7,11 +7,15 @@ export const SigNozFeatures = () => {
   return (
     <section>
       <div className={`container ${styles.featureContainer}`}>
-        <h1 className="text--center margin-bottom--lg">
-          <span className={styles.highlight}>Metrics, Traces, Logs</span> and{" "}
-          <span className={styles.highlight}>Exceptions</span> monitoring in a
-          single pane
-        </h1>
+        <div className="flex flex-col justify-center items-center ">
+          <p>EXPLORE SIGNOZ</p>
+          <h2>One Stop Observability</h2>
+          <p>
+            You don’t need to manage multiple tools for traces, metrics, and
+            logs. Get great out-of-the-box charts and a powerful query builder
+            to dig deeper into your data.
+          </p>
+        </div>
 
         <Tabs
           className={styles.tabStyling}
@@ -26,11 +30,15 @@ export const SigNozFeatures = () => {
           ]}
         >
           <TabItem className={styles.tabStyling} value="traces">
-            <div className="row">
-              <div className="col col--8">
-                <img src={"img/website/traces.png"} alt="Distributed Tracing" />
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <div className="">
+                <img
+                  src={"img/website/traces.png"}
+                  alt="Distributed Tracing"
+                  className="h-full w-full object-cover rounded-xl"
+                />
               </div>
-              <div className="col col--4">
+              <div className="">
                 <h3>Distributed Tracing</h3>
                 <ul>
                   <li>
@@ -52,11 +60,13 @@ export const SigNozFeatures = () => {
           </TabItem>
 
           <TabItem className={styles.tabStyling} value="logs">
-            <div className="row">
-              <div className="col col--8">
-                <img src={"img/website/logs.png"} alt="Logs Management" />
-              </div>
-              <div className="col col--4">
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <img
+                src={"img/website/logs.png"}
+                alt="Logs Management"
+                className="h-full w-full object-cover rounded-xl"
+              />
+              <div className="">
                 <h3>Logs Management</h3>
                 <ul>
                   <li> Native Support for OpenTelemetry Logs </li>
@@ -81,11 +91,13 @@ export const SigNozFeatures = () => {
           </TabItem>
 
           <TabItem className={styles.tabStyling} value="metrics">
-            <div className="row">
-              <div className="col col--8">
-                <img src={"img/website/metrics.png"} alt="Metrics Monitoring" />
-              </div>
-              <div className="col col--4">
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <img
+                src={"img/website/metrics.png"}
+                alt="Metrics Monitoring"
+                className="h-full w-full object-cover rounded-xl"
+              />
+              <div className="">
                 <h3>Metrics Monitoring</h3>
                 <ul>
                   <li>
@@ -103,14 +115,13 @@ export const SigNozFeatures = () => {
           </TabItem>
 
           <TabItem className={styles.tabStyling} value="infra">
-            <div className="row">
-              <div className="col col--8">
-                <img
-                  src={"img/website/infrastructure.png"}
-                  alt="Infrastructure Monitoring"
-                />
-              </div>
-              <div className="col col--4">
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <img
+                src={"img/website/infrastructure.png"}
+                alt="Infrastructure Monitoring"
+                className="h-full w-full object-cover rounded-xl"
+              />
+              <div className="">
                 <h3>Infrastructure Monitoring</h3>
                 <ul>
                   <li>End-to-End visibility into infrastructure performance</li>
@@ -128,14 +139,13 @@ export const SigNozFeatures = () => {
           </TabItem>
 
           <TabItem className={styles.tabStyling} value="exceptions">
-            <div className="row">
-              <div className="col col--8">
-                <img
-                  src={"img/website/exceptions.png"}
-                  alt="Exceptions Monitoring"
-                />
-              </div>
-              <div className="col col--4">
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <img
+                src={"img/website/exceptions.png"}
+                alt="Exceptions Monitoring"
+                className="h-full w-full object-cover rounded-xl"
+              />
+              <div className="">
                 <h3>Exceptions Monitoring</h3>
                 <ul>
                   <li>
@@ -157,12 +167,14 @@ export const SigNozFeatures = () => {
           </TabItem>
 
           <TabItem className={styles.tabStyling} value="alerts">
-            <div className="row">
-              <div className="col col--8">
-                <img src={"img/website/alerts.png"} alt="Alerts Management" />
-              </div>
+            <div className="grid grid-cols-2 gap-10 bg-indigo-300 bg-opacity-25 rounded-xl overflow-hidden">
+              <img
+                src={"img/website/alerts.png"}
+                alt="Alerts Management"
+                className="h-full w-full object-cover rounded-xl"
+              />
 
-              <div className="col col--4">
+              <div className="">
                 <h3>Alerts Management</h3>
                 <ul>
                   <li> Easy to set alerts with DIY query builder </li>

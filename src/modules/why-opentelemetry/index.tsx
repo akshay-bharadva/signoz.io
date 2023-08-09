@@ -1,52 +1,59 @@
-import React from "react"
-import styles from "./styles.module.css"
+import React from "react";
+import styles from "./styles.module.css";
 
 export const WhyOpenTelemetry = () => {
+  const REASONS = [
+    {
+      title: "No vendor lock-in",
+      desc: "Using an open source standard frees you from vendor lock-in.",
+      figure: "/img/website/vendorlockin-otel.svg",
+    },
+    {
+      title: "Ease of use",
+      desc: "Use auto-instrumentation libraries of OpenTelemetry to get started with little to no code change.",
+      figure: "/img/website/vendorlockin-otel.svg",
+    },
+    {
+      title: "Covers all use-cases",
+      desc: "OpenTelemetry is a one-stop solution for all your telemetry needs.",
+      figure: "/img/website/vendorlockin-otel.svg",
+    },
+    {
+      title: "Standardize Observability",
+      desc: "A single standard for all telemetry signals means increased developer productivity, consistency across teams.",
+      figure: "/img/website/vendorlockin-otel.svg",
+    },
+  ];
 
-    return(
-
-        <section>
-        <div
-          className="container"
-          style={{ marginTop: "6rem", marginBottom: "3rem" }}
-        >
-        <h1 class="text--center margin-vert--sm">
-                Why use <span className={styles.highlight}>OpenTelemetry</span>?
-        </h1>
+  return (
+    <section>
+      <div
+        className="container"
+        style={{ marginTop: "6rem", marginBottom: "3rem" }}
+      >
+        <p>SigNoz is OpenTelemetry-Native</p>
+        <h2 className="text--center margin-vert--sm">But why OpenTelemetry</h2>
         <p className="hero__subtitle text--center margin-bottom--xl">
-        Say bye to proprietary vendor agents, say hello to open source
+          OpenTelemetry is the second most active project in the CNCF, with only
+          Kubernetes being more active.
         </p>
 
-        <div class="row">
-                <div  style={{textAlign:"center"}} class="col col--4">
-                        <img  className={styles.iconImage}  src="/img/website/vendorlockin-otel.svg" alt="opentelemetry" />
-
-                        <h4>
-                        No vendor lock-in with OpenTelemetry
-                        </h4>
-
-                </div>
-
-                <div  style={{textAlign:"center"}} class="col col--4">
-                        <img  className={styles.iconImage} src="/img/website/standardise-otel.svg" alt="opentelemetry" />
-
-                        <h4>
-                        Standardize Observability with one open source standard
-                        </h4>
-
-                </div>
-
-                <div  style={{textAlign:"center"}} class="col col--4">
-                        <img  className={styles.iconImage} src="/img/website/high-quality-otel.svg" alt="opentelemetry" />
-
-                        <h4>
-                        High Quality Telemetry with intelligent correlation
-                        </h4>
-
-                </div>
+        <div className="grid grid-cols-2 gap-10">
+          {REASONS.map((reason) => (
+            <div key={reason.title} className="flex gap-10 items-center">
+              <img
+                className={styles.iconImage}
+                src={reason.figure}
+                alt={reason.title}
+              />
+              <div>
+                <h4>{reason.title}</h4>
+                <p>{reason.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        </div>
-
-      </section>
-    )
-}
+      </div>
+    </section>
+  );
+};

@@ -7,6 +7,10 @@
 
 /* You can override the default Infima variables here. */
 
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
 :root {
   /* ! COLORS */
   --ifm-color-primary: #f25733;
@@ -290,9 +294,7 @@ hero__screenshot {
 }
 
 .footer__copyright {
-  text-align: center;
   font-size: 14px;
-  padding-top: 2rem;
 }
 
 .footer__links {
@@ -472,4 +474,14 @@ table.custom-table tbody tr {
 }
 .underline {
   border-bottom: 2px solid;
+}
+
+.landing-section,
+.navbar,
+.footer {
+  font-family: 'Lexend', sans-serif !important;
+}
+
+.after\:blur-3xl::after { 
+  filter: blur(65px) !important;
 }
