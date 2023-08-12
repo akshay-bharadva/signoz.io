@@ -19,11 +19,10 @@ const Button = ({
   };
   const linkProps = {
     [href ? "href" : "to"]: href ? href : to,
-    [href ? "rel" : ""]: "noopener noreferrer nofollow",
-    [href ? "target" : ""]: "_blank",
+    [href ? "rel" : "data-prop"]: "noopener noreferrer nofollow",
+    [href ? "target" : "data-prop"]: "_blank",
   };
 
-  console.log("###linkProps", linkProps);
   return (
     <Link
       className={`cursor-pointer

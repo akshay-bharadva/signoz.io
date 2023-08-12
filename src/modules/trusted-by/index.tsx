@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Heading from "../../components/ui/Heading";
 
 const COMPANIES = [
   { image: "/img/users/netapp.png", imageDesc: "netapp logo" },
@@ -15,7 +16,9 @@ export const TrustedByTeams = () => {
   return (
     <section className={styles.used_by}>
       <div className="container">
-        <p className={styles.tagline}>Trusted by teams at</p>
+        <div className="flex flex-col items-center mb-5 text-center">
+          <Heading type={1}>Trusted by teams at</Heading>
+        </div>
         <ul className={`${styles.logoContainer} row`}>
           {COMPANIES.map((company, idx) => (
             <li key={`${idx}-${company.image}`} className="col col--3">

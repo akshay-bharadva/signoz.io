@@ -128,15 +128,15 @@ export const Testimonials = () => {
         <div className="flex flex-col items-center mb-5">
           <Heading type={4}>TESTIMONIALS</Heading>
           <Heading type={1}>
-            We love what people are saying about Signoz
+            We love what people are saying about SigNoz
           </Heading>
         </div>
 
         <div className="row">
           {TESTIMONIALS_LIST.map((column, idx) => (
             <div key={idx} className="col col--4">
-              {column.map((testimonial) => (
-                <div className="row">
+              {column.map((testimonial, i) => (
+                <div className="row" key={`${idx}-${i}`}>
                   <div className="card-demo m-2">
                     <div className="card">
                       <div className="card__header">

@@ -152,7 +152,7 @@ export default function SignUpFormReact() {
               onChange={(e) => setEmail(e.target.value)}
               required={true}
               placeholder="Type your email to sign up"
-              className="h-10 placeholder:text-gray-400 text-gray-900 text-sm px-2 pr-6 font-normal leading-loose bg-white rounded-none border-none"
+              className="h-10 placeholder:text-gray-400 text-gray-900 text-sm px-2 pr-6 font-normal leading-loose bg-white rounded-none border-none subscribe-input"
             />
             <SignUpFormButton />
           </form>
@@ -160,15 +160,6 @@ export default function SignUpFormReact() {
       );
   }
 
-  // <div className="h-10 flex flex-nowrap rounded-sm overflow-hidden gap-0 w-fit">
-  //   <input
-  //     placeholder="Type your email to sign up"
-  //     className="h-10 placeholder:text-gray-400 text-sm px-2 pr-6 font-normal leading-loose bg-white rounded-none border-none"
-  //   />
-  //   <button className="h-10 border-none outline-none text-sm px-8 rounded-none bg-primary-500 hover:bg-primary-600 cursor-pointer">
-  //     Subscribe
-  //   </button>
-  // </div>;
 
   function SignUpFormError() {
     return (

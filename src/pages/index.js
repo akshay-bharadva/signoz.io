@@ -679,13 +679,13 @@ function Home() {
           <WhyOpenTelemetry />
           <LatestInOpenTelementry />
           <BuildForDevelopers />
-          {/* <DataProtection /> */}
-          {/* <Observability /> */}
+          <DataProtection />
+          <Observability />
           <Pricing />
           <Statistics />
           <Testimonials />
           <Tutorials />
-          {/* <CTA /> */}
+          <CTA />
         </main>
       </Layout>
       <div id={"modal-root"}></div>

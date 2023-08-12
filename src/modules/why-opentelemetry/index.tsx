@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Heading from "../../components/ui/Heading";
+import SubHeading from "../../components/ui/SubHeading";
 
 export const WhyOpenTelemetry = () => {
   const REASONS = [
@@ -27,31 +29,35 @@ export const WhyOpenTelemetry = () => {
 
   return (
     <section>
-      <div
-        className="container"
-        style={{ marginTop: "6rem", marginBottom: "3rem" }}
-      >
-        <p>SigNoz is OpenTelemetry-Native</p>
-        <h2 className="text--center margin-vert--sm">But why OpenTelemetry</h2>
-        <p className="hero__subtitle text--center margin-bottom--xl">
-          OpenTelemetry is the second most active project in the CNCF, with only
-          Kubernetes being more active.
-        </p>
+      <div className="bg-[#252529]">
+        <div className="container py-16">
+          <div className="flex flex-col items-center mb-5 text-center">
+            <Heading type={4}>SigNoz is OpenTelemetry-Native</Heading>
+            <Heading type={1}>But why OpenTelemetry</Heading>
+            <SubHeading>
+              OpenTelemetry is the second most active project in the CNCF,
+              <br className="hidden lg:inline" />
+              with only Kubernetes being more active.
+            </SubHeading>
+          </div>
 
-        <div className="grid grid-cols-2 gap-10">
-          {REASONS.map((reason) => (
-            <div key={reason.title} className="flex gap-10 items-center">
-              <img
-                className={styles.iconImage}
-                src={reason.figure}
-                alt={reason.title}
-              />
-              <div>
-                <h4>{reason.title}</h4>
-                <p>{reason.desc}</p>
+          <div className="grid grid-cols-2 max-w-5xl mx-auto gap-y-10 gap-x-16">
+            {REASONS.map((reason) => (
+              <div key={reason.title} className="flex gap-10 items-center">
+                <img
+                  className={styles.iconImage}
+                  src={reason.figure}
+                  alt={reason.title}
+                />
+                <div>
+                  <Heading type={3}>{reason.title}</Heading>
+                  <p className="leading-relaxed text-base mb-4 text-gray-400">
+                    {reason.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -262,7 +262,7 @@ hero__screenshot {
   width: 100%;
   padding: 20px 40px;
   font-size: 16px;
-  justify-content: start;
+  justify-content: flex-start;
   display: flex;
 }
 
@@ -486,14 +486,11 @@ table.custom-table tbody tr {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(
-    97.11deg,
-    #ffffff 50.84%,
-    #8282ff 132.37%
-  );
+  background: -webkit-linear-gradient(0deg, #ffffff 50%, #8282ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 0.5rem 0;
 }
 .bluish-gradient {
   background: linear-gradient(95.84deg, #3a3f76 -8.15%, #212441 101.25%);
@@ -588,4 +585,72 @@ a.no-underline {
 }
 .hero-figure {
   background: linear-gradient(180deg, rgba(92, 92, 153, 0.74) 0%, #1c1c1f 100%);
+}
+.feature-tabs {
+  position: relative;
+}
+.feature-tabs::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(93.31deg, #6f6fe5 0.38%, #353579 100.69%);
+}
+.feature-tabs .active {
+  position: relative;
+  background: #f2573329;
+}
+.feature-tabs .active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #f25733;
+  z-index: 10;
+}
+.play-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.play-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgb(221, 80, 49);
+  animation: playFadeOut 1.5s ease-in-out infinite;
+}
+.play-container img {
+  transform: translateX(10%);
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes playFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.play-video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  max-width: 100vw;
+}
+.subscribe-input {
+  border: 2px solid #dd5031;
 }

@@ -2,112 +2,87 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import { PlaySVG } from "../../svgs/common";
+import SubHeading from "../../components/ui/SubHeading";
+import Hero from "../../components/ui/Hero";
+import Button from "../../components/ui/Button";
+import ReactModal from "react-modal";
 
 export const Header = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
     <header className="my-16">
-      <div className="container" style={{ textAlign: "center" }}>
-        <p className="" style={{ fontWeight: "bold", fontSize: "42px" }}>
+      <div className="flex flex-col items-center mb-5 text-center">
+        <Hero>
           OpenTelemetry-Native Traces,
           <br className="hidden lg:inline" />
           Metrics, and Logs in a single pane
-        </p>
-
-        <p className="text-sm mx-auto">
+        </Hero>
+        <SubHeading>
           SigNoz is an open source Datadog or New Relic alternative. A single
           tool for all your observability <br className="hidden lg:inline" />
           needs - APM, logs, metrics, exceptions, alerts, and dashboards powered
           by a powerful query builder.
-        </p>
-
-        <div style={{ margin: "1rem 0" }}>
-          <Link
-            style={{
-              margin: "6px",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-            }}
-            className="button button--primary "
-            href={"/teams/"}
-            id="btn-get-started-homepage-hero"
-          >
-            Try SigNoz Cloud
-          </Link>
-          <Link
-            style={{
-              margin: "6px",
-              paddingLeft: "30px",
-              paddingRight: "30px",
-            }}
-            className="button button--outline button--secondary "
-            href={"/docs/install/"}
-            id="btn-self-host-homepage-hero"
-          >
-            Self Host
-          </Link>
-        </div>
-
-        {/* <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
+        </SubHeading>
+      </div>
+      <div className="flex gap-5 justify-center mb-12">
+        <Button
+          isButton
+          className=""
+          to={"/teams/"}
+          id="btn-get-started-homepage-hero"
         >
-          {showVideo === false ? (
-            <div
-              id={"demo-video-cover"}
-              onClick={setShowVideo.bind(this, true)}
-              style={{
-                background: "url('/videos/demo-mar10-cover.webp')",
-                // height: 426,
-                width: "80%",
-                textAlign: "center",
-              }}
-            >
-              <div id={"demo-overlay"}></div>
-              <div id={"demo-content"}>
-                <div
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 600,
-                    marginBottom: 10,
-                  }}
-                >
-                  SigNoz - Quick Intro
-                </div>
-                <PlaySVG />
-              </div>
-            </div>
-          ) : (
-            <div>
-              <video
-                width="100%"
-                height="480"
-                autoPlay
-                controls
-                id={"demo-video-player"}
-              >
-                <source
-                  src="https://demo-video-1.s3.us-east-2.amazonaws.com/SigNoz-Demo-Sept2-2022.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          )}
-        </div> */}
+          Try SigNoz Cloud
+        </Button>
+        <Button
+          isButton
+          outlined
+          className=""
+          to={"/docs/install/"}
+          id="btn-self-host-homepage-hero"
+        >
+          Self-Host
+        </Button>
+      </div>
+      <div className="container" style={{ textAlign: "center" }}>
         <div className="flex justify-center items-center relative after:-z-[2] after:absolute after:content-[''] after:w-[600px] after:h-[600px] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl">
           <div className="p-2 rounded-lg flex justify-center items-center hero-figure">
             <img
               className="rounded-lg"
               src="/img/landing/signoz-landing-snap.png"
             />
+            <div
+              onClick={() => setShowVideo(true)}
+              className="cursor-pointer play-container w-24 h-24 rounded-full bg-primary-500 flex justify-center items-center focus-visible:outline-none"
+            >
+              <img src="/img/landing/play-icon.png" className="" />
+            </div>
           </div>
         </div>
       </div>
+      <ReactModal
+        isOpen={showVideo}
+        contentLabel=""
+        onRequestClose={() => setShowVideo(false)}
+        className="Modal play-video-container"
+        overlayClassName="Overlay"
+      >
+        <div>
+          <video
+            width="100%"
+            height="480"
+            autoPlay
+            controls
+            id={"demo-video-player"}
+          >
+            <source
+              src="https://demo-video-1.s3.us-east-2.amazonaws.com/SigNoz-Demo-Sept2-2022.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </ReactModal>
     </header>
   );
 };
