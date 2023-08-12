@@ -100,9 +100,9 @@ export const Header = () => {
           )}
         </div> */}
         <div className="flex justify-center items-center relative after:-z-[2] after:absolute after:content-[''] after:w-[600px] after:h-[600px] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl">
-          <div className="p-2 bg-[#5A5A95] rounded-md flex justify-center items-center">
+          <div className="p-2 rounded-lg flex justify-center items-center hero-figure">
             <img
-              className="rounded-md"
+              className="rounded-lg"
               src="/img/landing/signoz-landing-snap.png"
             />
           </div>
