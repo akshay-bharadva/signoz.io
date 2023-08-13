@@ -41,9 +41,12 @@ export const WhyOpenTelemetry = () => {
             </SubHeading>
           </div>
 
-          <div className="grid grid-cols-2 max-w-5xl mx-auto gap-y-10 gap-x-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-xl lg:max-w-5xl mx-auto gap-y-10 gap-x-16">
             {REASONS.map((reason) => (
-              <div key={reason.title} className="flex gap-10 items-center">
+              <div
+                key={reason.title}
+                className="flex gap-5 items-center flex-row-reverse lg:flex-row lg:gap-10"
+              >
                 <img
                   className={styles.iconImage}
                   src={reason.figure}

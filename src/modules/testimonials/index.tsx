@@ -125,7 +125,7 @@ export const Testimonials = () => {
   return (
     <section>
       <div className="container my-8">
-        <div className="flex flex-col items-center mb-5">
+        <div className="flex flex-col items-center mb-5 text-center">
           <Heading type={4}>TESTIMONIALS</Heading>
           <Heading type={1}>
             We love what people are saying about SigNoz
@@ -137,7 +137,7 @@ export const Testimonials = () => {
             <div key={idx} className="col col--4">
               {column.map((testimonial, i) => (
                 <div className="row" key={`${idx}-${i}`}>
-                  <div className="card-demo m-2">
+                  <div className="card-demo m-2 w-full">
                     <div className="card">
                       <div className="card__header">
                         <div className="avatar">

@@ -162,6 +162,7 @@ export const SigNozFeatures = () => {
       ),
     },
   ];
+
   return (
     <section>
       <div className={`container my-10 mb-16`}>
@@ -175,7 +176,7 @@ export const SigNozFeatures = () => {
           </SubHeading>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto hidden lg:block">
           <div className={`grid grid-cols-6 feature-tabs mb-5`}>
             {FEATURES_LIST.map((feature, idx) => (
               <div
@@ -220,7 +221,79 @@ export const SigNozFeatures = () => {
             ))}
           </div>
         </div>
+
+        <div className="max-w-6xl mx-auto lg:hidden">
+          <div className="rounded-lg overflow-hidden feature-accordion-container">
+            {FEATURES_LIST.map((feature) => {
+              return (
+                <div
+                  className={`feature-accordion ${
+                    tab === feature.value ? "bluish-gradient" : ""
+                  }`}
+                  key={feature.value}
+                >
+                  <div
+                    onClick={() => setTab(feature.value)}
+                    className="cursor-pointer px-5 py-5 flex justify-between items-center"
+                  >
+                    <div className="flex justify-center items-center gap-5">
+                      <img
+                        src={feature.icon}
+                        alt={feature.label}
+                        className="w-5 h-5"
+                      />
+                      <Heading type={5} className={"m-0"}>
+                        {feature.label}
+                      </Heading>
+                    </div>
+                    <span
+                      className={`h-5 w-5 flex justify-center items-center ${
+                        tab === feature.value ? "open" : ""
+                      }`}
+                    >
+                      <DownArrow />
+                    </span>
+                  </div>
+                  <div
+                    className={`${
+                      tab === feature.value ? "visible" : "hidden"
+                    }`}
+                  >
+                    <div className="px-5 py-4">
+                      <div className="max-w-sm mx-auto">
+                        <img
+                          src={feature.figure}
+                          alt={feature.label}
+                          className="h-full object-cover rounded-xl"
+                        />
+                      </div>
+                      <div>{feature.content}</div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
+  );
+};
+
+const DownArrow = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
   );
 };

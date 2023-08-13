@@ -25,7 +25,7 @@ const formStyles = {
   userGroup: "",
 };
 
-export default function SignUpFormReact() {
+export default function SignUpFormReact({ className }) {
   const [email, setEmail] = useState("");
   const [formState, setFormState] = useState<(typeof formStates)[number]>(INIT);
   const [errorMessage, setErrorMessage] = useState("");
@@ -130,10 +130,10 @@ export default function SignUpFormReact() {
     case ERROR:
       return (
         <>
-        <div className="flex justify-between items-center">
-          <SignUpFormError />
-          <BackButton />
-        </div>
+          <div className="flex justify-between items-center">
+            <SignUpFormError />
+            <BackButton />
+          </div>
         </>
       );
     default:
@@ -141,9 +141,7 @@ export default function SignUpFormReact() {
         <>
           <form
             onSubmit={handleSubmit}
-            className={
-              "h-10 flex flex-nowrap rounded-sm overflow-hidden gap-0 w-fit"
-            }
+            className={`h-10 flex flex-nowrap rounded-sm overflow-hidden gap-0 w-full ${className}`}
           >
             <input
               type="text"
@@ -152,14 +150,13 @@ export default function SignUpFormReact() {
               onChange={(e) => setEmail(e.target.value)}
               required={true}
               placeholder="Type your email to sign up"
-              className="h-10 placeholder:text-gray-400 text-gray-900 text-sm px-2 pr-6 font-normal leading-loose bg-white rounded-none border-none subscribe-input"
+              className="h-10 placeholder:text-gray-400 text-gray-900 text-sm px-2 pr-1 font-normal leading-loose bg-white rounded-none border-none subscribe-input w-8/12"
             />
             <SignUpFormButton />
           </form>
         </>
       );
   }
-
 
   function SignUpFormError() {
     return (
@@ -171,7 +168,12 @@ export default function SignUpFormReact() {
 
   function BackButton() {
     return (
-      <button className={"text-gray-400 text-sm bg-transparent outline-none border-none cursor-pointer"} onClick={resetForm}>
+      <button
+        className={
+          "text-gray-400 text-sm bg-transparent outline-none border-none cursor-pointer"
+        }
+        onClick={resetForm}
+      >
         &larr; Back
       </button>
     );
@@ -179,7 +181,10 @@ export default function SignUpFormReact() {
 
   function SignUpFormButton({ props }: any) {
     return (
-      <button type="submit" className="h-10 border-none outline-none text-sm px-8 rounded-none bg-primary-500 hover:bg-primary-600 cursor-pointer">
+      <button
+        type="submit"
+        className="h-10 border-none outline-none text-sm rounded-none bg-primary-500 hover:bg-primary-600 cursor-pointer w-4/12"
+      >
         {formState === SUBMITTING ? "Please wait..." : formStyles.buttonText}
       </button>
     );

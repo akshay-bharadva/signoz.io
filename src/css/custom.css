@@ -474,11 +474,11 @@ table.custom-table tbody tr {
   }
 }
 
-.landing-section,
+/* .landing-section,
 .navbar,
 .footer {
   font-family: "Lexend", sans-serif !important;
-}
+} */
 
 .after\:blur-3xl::after,
 .before\:blur-3xl::before {
@@ -513,17 +513,9 @@ table.custom-table tbody tr {
     linear-gradient(93.31deg, #ff5e3a 0.38%, #ffb4a4 100.69%);
 }
 .border-gradient {
-  /* background: transparent;
-  background-image: linear-gradient(90deg,#1b1b1d,#1b1b1d),linear-gradient(93.31deg, #FFB4A4 0.38%, #FF5E3A 100.69%);
-  background-clip: padding-box,border-box;
-  background-origin: border-box;
-  border: 2px solid transparent; */
   background: transparent;
   border: 2px solid #ff5e3a;
   transition: all 0.5s ease-out;
-}
-.border-gradient:hover {
-  /* background-image: linear-gradient(90deg,#1b1b1d,#1b1b1d),linear-gradient(93.31deg, #FF5E3A 0.38%, #FFB4A4 100.69%); */
 }
 a.no-underline {
   text-decoration: none;
@@ -533,7 +525,6 @@ a.no-underline {
 }
 .pricing-card {
   border-left: 1rem solid #212441;
-  /* background: #212441; */
 }
 .plans-container {
   background-image: url("/img/landing/hexa-pattern.png");
@@ -580,7 +571,6 @@ a.no-underline {
   width: 100%;
   height: 2px;
   bottom: 0;
-  /* background-image: linear-gradient(93.31deg, #6F6FE5 0.38%, #353579 100.69%); */
   border-bottom: 2px dashed #353579;
 }
 .hero-figure {
@@ -610,6 +600,15 @@ a.no-underline {
   background: #f25733;
   z-index: 10;
 }
+.feature-accordion-container {
+  border: 1px solid #4747cb;
+}
+.feature-accordion-container .open {
+  transform: rotate(180deg);
+}
+.feature-accordion:not(:last-child) {
+  border-bottom: 1px solid #4747cb;
+}
 .play-container {
   position: absolute;
   top: 50%;
@@ -632,17 +631,6 @@ a.no-underline {
   position: relative;
   z-index: 2;
 }
-
-@keyframes playFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
 .play-video-container {
   position: absolute;
   top: 50%;
@@ -653,4 +641,29 @@ a.no-underline {
 }
 .subscribe-input {
   border: 2px solid #dd5031;
+}
+@keyframes playFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .self-hosted-data-protection::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 43.5%;
+    left: 0;
+    border: none;
+    border-bottom: 2px dashed #353579;
+  }
+  .plans-container {
+    background-image: none;
+  }
 }

@@ -255,7 +255,7 @@ function TrySignozModal(props) {
 }
 
 const Statistics = () => {
-  const stats = [
+  const STATS_LIST = [
     { id: 1, name: "Downloads", value: "3.2M" },
     { id: 2, name: "GitHub Stars", value: "13.8k+" },
     { id: 3, name: "Contributors", value: "100+" },
@@ -265,7 +265,7 @@ const Statistics = () => {
     <section>
       <div className="py-16 bg-[#252529]">
         <div className="container">
-          <div className="flex flex-col justify-center items-center mb-10">
+          <div className="flex flex-col justify-center items-center mb-10 text-center">
             <Heading>
               Developers <span className="heart-emoji">❤️</span> Open Source
               SigNoz
@@ -275,8 +275,8 @@ const Statistics = () => {
             </SubHeading>
           </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-              {stats.map((stat) => (
+            <div className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+              {STATS_LIST.map((stat) => (
                 <div
                   key={stat.id}
                   className="mx-auto flex max-w-xs flex-col gap-y-4 justify-center"
@@ -321,7 +321,7 @@ const LatestInOpenTelementry = () => {
   return (
     <section>
       <div className="container my-16">
-        <div className="flex flex-col items-center mb-5">
+        <div className="flex flex-col items-center mb-5 text-center">
           <Heading type={4}>Read ABOUT</Heading>
           <Heading type={1}>Latest in OpenTelemetry</Heading>
         </div>
@@ -421,29 +421,40 @@ const BuildForDevelopers = () => {
     <section>
       <div className="overflow-hidden">
         <div
-          className={`container px-5 py-12 mx-auto mb-10 relative
-          after:-z-[2] after:absolute after:content-[''] after:w-[600px] after:h-[600px] after:top-[10%] after:-left-[50%] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl 
-          before:-z-[2] before:absolute before:content-[''] before:w-[600px] before:h-[600px] before:top-[10%] before:-right-[50%] before:bg-primary-500 before:rounded-full before:opacity-50 before:blur-3xl 
+          className={`container px-5 py-12 mx-auto mb-0 relative
+          after:-z-[2] after:absolute after:content-[''] after:w-[180px] after:h-[800px] lg:after:w-[500px] lg:after:h-[600px] xl:after:w-[600px] xl:after:h-[600px] after:top-[10%] after:-left-[50%] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl 
+          before:-z-[2] before:absolute before:content-[''] before:w-[180px] before:h-[800px] lg:before:w-[500px] lg:before:h-[600px] xl:before:w-[600px] xl:before:h-[600px] before:top-[10%] before:-right-[50%] before:bg-primary-500 before:rounded-full before:opacity-50 before:blur-3xl 
       `}
         >
-          <div className="flex flex-col items-center mb-10">
+          <div className="flex flex-col items-center mb-10 text-center">
             <Heading type={4}>
               Get granular control over your observability data.
             </Heading>
             <Heading type={1}>Built for developers like you.</Heading>
           </div>
 
-          <div className="divide-y-2 divide-gray-100 max-w-3xl mx-auto">
+          <div className="divide-y-2 divide-gray-100 max-w-xl lg:max-w-3xl mx-auto">
             {REASONS.map((reason) => (
               <div
-                className="grid grid-cols-2 for-devs-container py-5"
+                className="flex flex-row-reverse gap-5 lg:gap-0 lg:grid lg:grid-cols-2 for-devs-container py-5"
                 key={reason.title}
               >
-                <div className=" flex gap-10 items-center">
-                  <img src={reason.figure} alt="figure for devs" />
-                  <h2 className="text-2xl font-medium mb-2">{reason.title}</h2>
+                <div className="flex gap-10 justify-center lg:justify-start items-center w-1/5 lg:w-auto">
+                  <img
+                    src={reason.figure}
+                    alt="figure for devs"
+                    className="w-14 h-14 block"
+                  />
+                  <h2 className="hidden lg:block text-2xl font-medium mb-2">
+                    {reason.title}
+                  </h2>
                 </div>
-                <p className="leading-relaxed">{reason.desc}</p>
+                <div className="flex-shrink w-4/5 lg:w-auto">
+                  <h2 className="block lg:hidden text-2xl font-medium mb-2">
+                    {reason.title}
+                  </h2>
+                  <p className="leading-relaxed">{reason.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -465,20 +476,20 @@ const Pricing = () => {
             We’re here for you.
           </SubHeading>
         </div>
-        <div className="flex flex-wrap max-w-5xl mx-auto">
-          <div className="xl:w-1/3 lg:w-1/3 md:w-full px-8 py-1 pricing-card">
+        <div className="flex flex-wrap md:max-w-md lg:max-w-5xl mx-auto gap-y-5 justify-center">
+          <div className="md:w-full lg:w-1/3 xl:w-1/3 px-8 py-1 pricing-card">
             <Heading type={3}>No user-based pricing</Heading>
             <p className="leading-relaxed text-base mb-4 text-gray-400">
               Add as many team members as you want.
             </p>
           </div>
-          <div className="xl:w-1/3 lg:w-1/3 md:w-full px-8 py-1 pricing-card">
+          <div className="md:w-full lg:w-1/3 xl:w-1/3 px-8 py-1 pricing-card">
             <Heading type={3}>Simple usage-based pricing</Heading>
             <p className="leading-relaxed text-base mb-4 text-gray-400">
               Only pay for the data you send.
             </p>
           </div>
-          <div className="xl:w-1/3 lg:w-1/3 md:w-full px-8 py-1 pricing-card">
+          <div className="md:w-full lg:w-1/3 xl:w-1/3 px-8 py-1 pricing-card">
             <Heading type={3}>No special pricing for custom metrics</Heading>
             <p className="leading-relaxed text-base mb-4 text-gray-400">
               All metrics charged simply at $0.1 per million samples.
@@ -535,7 +546,7 @@ const Observability = () => {
   return (
     <section>
       <div className="container mt-16">
-        <div className="flex flex-col items-center mb-5">
+        <div className="flex flex-col items-center mb-5 text-center">
           <Heading type={4}>Enterprise Grade Observability</Heading>
           <Heading type={1}>
             Get access to observability at any scale
@@ -543,25 +554,36 @@ const Observability = () => {
             with advanced security and compliance.
           </Heading>
         </div>
-        <div className="bg-[#252529] max-w-2xl grid grid-cols-2 gap-10 mx-auto rounded-lg plans-container px-10 py-8">
-          <div>
-            <ul className="plans-features">
-              <li className="py-3 text-lg">SSO and SAML support</li>
-              <li className="py-3 text-lg">Query API Keys</li>
-              <li className="py-3 text-lg">Advanced Security</li>
-              <li className="py-3 text-lg">AWS Private Link</li>
-            </ul>
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-[#252529] grid grid-cols-1 md:grid-cols-2 md:gap-10 mx-auto rounded-lg plans-container px-10 py-8">
+            <div>
+              <ul className="plans-features m-0">
+                <li className="py-3 text-lg">SSO and SAML support</li>
+                <li className="py-3 text-lg">Query API Keys</li>
+                <li className="py-3 text-lg">Advanced Security</li>
+                <li className="py-3 text-lg">AWS Private Link</li>
+              </ul>
+            </div>
+            <div>
+              <div className="flex flex-col justify-between h-full">
+                <ul className="plans-features m-0">
+                  <li className="py-3 text-lg">VPC Peering</li>
+                  <li className="py-3 text-lg">Custom Integrations</li>
+                </ul>
+                <Button isButton to={"pricing"} className="hidden md:block">
+                  Check plans
+                </Button>
+              </div>
+            </div>
           </div>
           <div>
-            <div className="flex flex-col justify-between h-full">
-              <ul className="plans-features">
-                <li className="py-3 text-lg">VPC Peering</li>
-                <li className="py-3 text-lg">Custom Integrations</li>
-              </ul>
-              <Button isButton to={"pricing"}>
-                Check plans
-              </Button>
-            </div>
+            <Button
+              isButton
+              to={"pricing"}
+              className="block md:hidden w-full mx-auto my-5"
+            >
+              Check plans
+            </Button>
           </div>
         </div>
       </div>
@@ -572,7 +594,7 @@ const Observability = () => {
 const DataProtection = () => {
   return (
     <section>
-      <div className="container my-16 mb-24">
+      <div className="container mt-5 mb-24">
         <div className="flex flex-col items-center mb-1 text-center">
           <Heading type={1}>
             Worried about data protection laws?
@@ -580,8 +602,8 @@ const DataProtection = () => {
             We can help.
           </Heading>
         </div>
-        <div className="grid grid-cols-2 max-w-4xl mx-auto gap-10 my-16 self-hosted-data-protection">
-          <div className="pl-5 flex flex-col justify-between gap-5">
+        <div className="md:grid grid-cols-2 max-w-4xl mx-auto gap-10 my-16 self-hosted-data-protection">
+          <div className="mb-10 text-center md:text-left md:pl-5 flex flex-col justify-between gap-5">
             <div>
               <Heading type={4}>For SigNoz Cloud</Heading>
               <Heading type={3}>
@@ -592,22 +614,22 @@ const DataProtection = () => {
                 needs.
               </SubHeading>
             </div>
-            <div className="flex flex-wrap gap-5">
-              <div className="flex gap-1 flex-col justify-center items-start">
+            <div className="flex flex-wrap gap-5 justify-center md:justify-start">
+              <div className="flex gap-1 flex-col justify-center items-center md:items-start">
                 <img
                   src="/img/landing/us.png"
                   alt="flag of hosting available"
                 />
                 <span>US Cloud</span>
               </div>
-              <div className="flex gap-1 flex-col justify-center items-start">
+              <div className="flex gap-1 flex-col justify-center items-center md:items-start">
                 <img
                   src="/img/landing/eu.png"
                   alt="flag of hosting available"
                 />
                 <span>EU Cloud</span>
               </div>
-              <div className="flex gap-1 flex-col justify-center items-start">
+              <div className="flex gap-1 flex-col justify-center items-center md:items-start">
                 <img
                   src="/img/landing/india.png"
                   alt="flag of hosting available"
@@ -617,7 +639,7 @@ const DataProtection = () => {
             </div>
             <Button to="/">Try SigNoz Cloud</Button>
           </div>
-          <div className="pl-5 flex flex-col justify-between gap-5">
+          <div className="mb-10 text-center md:text-left md:pl-5 flex flex-col justify-between gap-5">
             <div>
               <Heading type={4}>For Self-Hosted</Heading>
               <Heading type={3}>Have your customer data in your infra</Heading>
@@ -627,14 +649,16 @@ const DataProtection = () => {
                 regulation laws.
               </SubHeading>
             </div>
-            <div className="flex gap-1 flex-col justify-center items-start">
-              <img
-                src="/img/landing/india.png"
-                alt="flag of hosting available"
-              />
-              <span>India Cloud</span>
+            <div className="flex flex-wrap gap-5 justify-center md:justify-start">
+              <div className="flex gap-1 flex-col justify-center items-center md:items-start">
+                <img
+                  src="/img/landing/india.png"
+                  alt="flag of hosting available"
+                />
+                <span>India Cloud</span>
+              </div>
             </div>
-            <div className="flex justify-between">
+            <div className="flex flex-col lg:flex-row items-center md:items-start gap-5 md:gap-0 lg:justify-between">
               <Button to="/">Self Host</Button>
               <Button to="/">Managed by SigNoz in your cloud </Button>
             </div>

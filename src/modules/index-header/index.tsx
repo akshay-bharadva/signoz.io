@@ -45,7 +45,7 @@ export const Header = () => {
         </Button>
       </div>
       <div className="container" style={{ textAlign: "center" }}>
-        <div className="flex justify-center items-center relative after:-z-[2] after:absolute after:content-[''] after:w-[600px] after:h-[600px] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl">
+        <div className="flex justify-center items-center relative after:-z-[2] after:absolute after:content-[''] after:w-[300px] after:h-[300px] lg:after:w-[600px] lg:after:h-[600px] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl">
           <div className="p-2 rounded-lg flex justify-center items-center hero-figure">
             <img
               className="rounded-lg"
@@ -53,9 +53,12 @@ export const Header = () => {
             />
             <div
               onClick={() => setShowVideo(true)}
-              className="cursor-pointer play-container w-24 h-24 rounded-full bg-primary-500 flex justify-center items-center focus-visible:outline-none"
+              className="cursor-pointer play-container w-16 h-16 md:w-24 md:h-24 rounded-full bg-primary-500 flex justify-center items-center focus-visible:outline-none"
             >
-              <img src="/img/landing/play-icon.png" className="" />
+              <img
+                src="/img/landing/play-icon.png"
+                className="w-6 h-6 md:w-10 md:h-10"
+              />
             </div>
           </div>
         </div>
