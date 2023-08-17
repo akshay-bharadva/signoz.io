@@ -48,7 +48,7 @@ export const WhyOpenTelemetry = () => {
                 className="flex gap-5 items-center flex-row-reverse lg:flex-row lg:gap-10"
               >
                 <img
-                  className={styles.iconImage}
+                  className={`${styles.iconImage} hidden`}
                   src={reason.figure}
                   alt={reason.title}
                 />

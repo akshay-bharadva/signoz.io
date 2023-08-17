@@ -6,6 +6,7 @@ import SubHeading from "../../components/ui/SubHeading";
 import Hero from "../../components/ui/Hero";
 import Button from "../../components/ui/Button";
 import ReactModal from "react-modal";
+import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
 export const Header = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -71,19 +72,11 @@ export const Header = () => {
         overlayClassName="Overlay"
       >
         <div>
-          <video
-            width="100%"
-            height="480"
-            autoPlay
-            controls
-            id={"demo-video-player"}
-          >
-            <source
-              src="https://demo-video-1.s3.us-east-2.amazonaws.com/SigNoz-Demo-Sept2-2022.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          <LiteYoutubeEmbed
+            id={"jD36hjfL1x0"}
+            mute={false}
+            defaultPlay={showVideo}
+          />
         </div>
       </ReactModal>
     </header>

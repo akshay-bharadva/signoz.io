@@ -7,6 +7,18 @@ import SubHeading from "../../components/ui/SubHeading";
 
 export const SigNozFeatures = () => {
   const [tab, setTab] = useState("traces");
+
+  const featureChangeHandler = (value) => {
+    if (value === tab) {
+      setTab("");
+    } else {
+      setTab(value);
+    }
+    document
+      .getElementById(`accordion-${value}`)
+      .scrollIntoView({ behavior: "smooth"});
+  };
+
   const FEATURES_LIST = [
     {
       label: "Distributed Tracing",
@@ -189,7 +201,7 @@ export const SigNozFeatures = () => {
                 <img
                   src={feature.icon}
                   alt={feature.label}
-                  className="w-10 h-10"
+                  className="w-10 h-10 hidden"
                 />
                 <p
                   className={`text-sm ${
@@ -231,9 +243,10 @@ export const SigNozFeatures = () => {
                     tab === feature.value ? "bluish-gradient" : ""
                   }`}
                   key={feature.value}
+                  id={`accordion-${feature.value}`}
                 >
                   <div
-                    onClick={() => setTab(feature.value)}
+                    onClick={() => featureChangeHandler(feature.value)}
                     className="cursor-pointer px-5 py-5 flex justify-between items-center"
                   >
                     <div className="flex justify-center items-center gap-5">
