@@ -8,22 +8,22 @@ export const WhyOpenTelemetry = () => {
     {
       title: "No vendor lock-in",
       desc: "Using an open source standard frees you from vendor lock-in.",
-      figure: "/img/website/vendorlockin-otel.svg",
+      figure: "/img/landing/property-no-vendor-lock-in.png",
     },
     {
       title: "Ease of use",
       desc: "Use auto-instrumentation libraries of OpenTelemetry to get started with little to no code change.",
-      figure: "/img/website/vendorlockin-otel.svg",
+      figure: "/img/landing/property-ease-of-use.png",
     },
     {
       title: "Covers all use-cases",
       desc: "OpenTelemetry is a one-stop solution for all your telemetry needs.",
-      figure: "/img/website/vendorlockin-otel.svg",
+      figure: "/img/landing/property-covers-all-use-cases.png",
     },
     {
       title: "Standardize Observability",
       desc: "A single standard for all telemetry signals means increased developer productivity, consistency across teams.",
-      figure: "/img/website/vendorlockin-otel.svg",
+      figure: "/img/landing/property-standardize-observability.png",
     },
   ];
 
@@ -48,7 +48,7 @@ export const WhyOpenTelemetry = () => {
                 className="flex gap-5 items-center flex-row-reverse lg:flex-row lg:gap-10"
               >
                 <img
-                  className={`${styles.iconImage} hidden`}
+                  className={`${styles.iconImage}`}
                   src={reason.figure}
                   alt={reason.title}
                 />

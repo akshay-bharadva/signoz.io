@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header className="my-16">
-      <div className="flex flex-col items-center mb-5 text-center">
+      <div className="flex flex-col items-center mb-5 text-center px-5">
         <Hero>
           OpenTelemetry-Native Traces,
           <br className="hidden lg:inline" />
@@ -74,7 +74,6 @@ export const Header = () => {
         <div>
           <LiteYoutubeEmbed
             id={"jD36hjfL1x0"}
-            mute={false}
             defaultPlay={showVideo}
           />
         </div>

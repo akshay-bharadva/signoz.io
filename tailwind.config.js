@@ -15,7 +15,11 @@ module.exports = {
           200: "#ff947c",
           100: "#ffbdae",
         },
-        tertiary: "#FF6B00"
+        tertiary: "#FF6B00",
+        bluish: {
+          400: "#8282ff",
+          600: "#3a3f76",
+        },
       },
     },
   },

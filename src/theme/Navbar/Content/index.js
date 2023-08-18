@@ -59,7 +59,7 @@ export default function NavbarContent() {
             <iframe
               className="display--tablet"
               src={`https://ghbtns.com/github-btn.html?user=signoz&repo=signoz&type=star&count=true&size=large`}
-              width="160"
+              width="180"
               height="30"
               title="Star SigNoz on GitHub"
             />

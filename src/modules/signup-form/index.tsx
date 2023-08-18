@@ -141,7 +141,7 @@ export default function SignUpFormReact({ className }) {
         <>
           <form
             onSubmit={handleSubmit}
-            className={`h-10 flex flex-nowrap rounded-sm overflow-hidden gap-0 w-full ${className}`}
+            className={`h-10 flex flex-nowrap rounded-sm overflow-hidden gap-0 w-full sm:w-1/2 md:w-full ${className}`}
           >
             <input
               type="text"

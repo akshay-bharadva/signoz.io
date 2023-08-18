@@ -399,22 +399,22 @@ const BuildForDevelopers = () => {
     {
       title: "Query Builder",
       desc: "Write queries on all telemetry signals. Run aggregates, and apply filters and formulas to get deeper insights from your data.",
-      figure: "/img/landing/placeholder.png",
+      figure: "/img/landing/property-query-buider.png",
     },
     {
       title: "Columnar Database",
       desc: "SigNoz uses ClickHouse - a fast open source distributed columnar database. Ingestion and aggregations are lightening fast.",
-      figure: "/img/landing/placeholder.png",
+      figure: "/img/landing/property-columnar-database.png",
     },
     {
       title: "Data Pipelines",
       desc: "Build data pipelines easily with SigNoz OTel Collector. Integrate any existing pipeline with OTel Collector to send data to SigNoz.",
-      figure: "/img/landing/placeholder.png",
+      figure: "/img/landing/property-telemetry-pipeline.png",
     },
     {
       title: "Source Code",
       desc: "Check out the entire source code of SigNoz on GitHub. Create issues, build features & integrations, get started without contacting any sales rep.",
-      figure: "/img/landing/placeholder.png",
+      figure: "/img/landing/property-source-code.png",
     },
   ];
   return (
@@ -444,7 +444,7 @@ const BuildForDevelopers = () => {
                     <img
                       src={reason.figure}
                       alt="figure for devs"
-                      className="w-14 h-14 block hidden"
+                      className="w-14 h-14 block"
                     />
                     <h2 className="hidden lg:block text-2xl font-medium mb-2">
                       {reason.title}
@@ -518,7 +518,7 @@ const CTA = () => {
               Check out our hosted and enterprise solutions.
             </SubHeading>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 flex-col sm:flex-row">
             <Button
               isButton
               className=""
@@ -639,7 +639,7 @@ const DataProtection = () => {
                 <span>India Cloud</span>
               </div>
             </div>
-            <Button to="/">Try SigNoz Cloud</Button>
+            <Button to="/teams">Try SigNoz Cloud</Button>
           </div>
           <div className="mb-10 text-center md:text-left md:pl-5 flex flex-col justify-between gap-5">
             <div>
@@ -654,15 +654,15 @@ const DataProtection = () => {
             <div className="flex flex-wrap gap-5 justify-center md:justify-start">
               <div className="flex gap-1 flex-col justify-center items-center md:items-start">
                 <img
-                  src="/img/landing/india.png"
-                  alt="flag of hosting available"
+                  src="/img/landing/data-privacy.png"
+                  alt="data privacy available"
                 />
-                <span>India Cloud</span>
+                <span>Data Privacy</span>
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center md:items-start gap-5 md:gap-0 lg:justify-between">
-              <Button to="/">Self Host</Button>
-              <Button to="/">Managed by SigNoz in your cloud </Button>
+              <Button to="/docs/install/">Self Host</Button>
+              <Button to="/enterprise/">Managed by SigNoz in your cloud</Button>
             </div>
           </div>
         </div>
@@ -710,7 +710,7 @@ function Home() {
           <Pricing />
           <Statistics />
           <Testimonials />
-          <Tutorials />
+          {/* <Tutorials /> */}
           <CTA />
         </main>
       </Layout>

@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer
-      className={clsx("bg-[#242526] footer", {
+      className={clsx("bg-[#242526] footer px-3", {
         "footer--dark": style === "dark",
       })}
     >

@@ -58,9 +58,12 @@
   /* --ifm-font-family-base: "Space Grotesk"; */
   /* --ifm-font-family-base: arial; */
   --ifm-font-family-base: "Lexend", sans-serif;
-  --ifm-font-size-base: 12pt;
   --ifm-font-family-work-sans: "Lexend", sans-serif;
+  --ifm-font-size-base: 12pt;
+  --ifm-line-height-base: 1.8;
   --ifm-font-letter-spacing: -0.015rem;
+
+  --ifm-navbar-height: 4.5rem;
 }
 
 figure {
@@ -81,6 +84,8 @@ figure > figcaption {
 
 nav.navbar {
   z-index: 10 !important;
+  background: #1b1b1d;
+  border-bottom: 0.5px solid #353579;
 }
 
 .medium-zoom-overlay {
@@ -474,12 +479,6 @@ table.custom-table tbody tr {
   }
 }
 
-/* .landing-section,
-.navbar,
-.footer {
-  font-family: "Lexend", sans-serif !important;
-} */
-
 .after\:blur-3xl::after,
 .before\:blur-3xl::before {
   filter: blur(65px) !important;
@@ -598,7 +597,7 @@ a.no-underline {
   width: 100%;
   height: 1px;
   background: #f25733;
-  z-index: 10;
+  z-index: 1;
 }
 .feature-accordion-container {
   border: 1px solid #4747cb;
@@ -642,6 +641,7 @@ a.no-underline {
 .subscribe-input {
   border: 2px solid #dd5031;
 }
+/* animation for play on landing page */
 @keyframes playFadeOut {
   0% {
     opacity: 1;

@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import styles from "./styles.module.css";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
 import Heading from "../../components/ui/Heading";
 import SubHeading from "../../components/ui/SubHeading";
 
 export const SigNozFeatures = () => {
-  const [tab, setTab] = useState("traces");
+  const [tab, setTab] = useState("apm");
 
   const featureChangeHandler = (value) => {
     if (value === tab) {
@@ -16,71 +13,14 @@ export const SigNozFeatures = () => {
     }
     document
       .getElementById(`accordion-${value}`)
-      .scrollIntoView({ behavior: "smooth"});
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   const FEATURES_LIST = [
     {
-      label: "Distributed Tracing",
-      value: "traces",
-      figure: "img/website/traces.png",
-      icon: "/img/landing/icon-placeholder.png",
-      content: (
-        <>
-          <ul>
-            <li className="mb-2 text-lg">
-              End-to-end visibility of your services with rich contextual tags
-              and attributes
-            </li>
-            <li className="mb-2 text-lg">
-              Run advanced aggregates on trace data to get business relevant
-              metrics
-            </li>
-            <li className="mb-2 text-lg">
-              Powerful filters to drive insights faster
-            </li>
-            <li className="mb-2 text-lg">
-              Flame graphs and Gantt Charts to visualize flow of requests easily
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      label: "Logs Management ",
-      value: "logs",
-      figure: "img/website/logs.png",
-      icon: "/img/landing/icon-placeholder.png",
-      content: (
-        <>
-          <ul>
-            <li className="mb-2 text-lg">
-              Native Support for OpenTelemetry Logs
-            </li>
-            <li className="mb-2 text-lg">
-              Advanced Log Query Builder to help you search & filter logs easily
-            </li>
-            <li className="mb-2 text-lg">
-              Automatic Log Collection from K8s cluster
-            </li>
-            <li className="mb-2 text-lg">
-              Uses Columnar Database (ClickHouse) for lightening quick Log
-              analytics
-              <a
-                target="_blank"
-                href="https://signoz.io/blog/logs-performance-benchmark/"
-              >
-                [Logs Perf. Benchmark]
-              </a>
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      label: "Metrics & Dashboards ",
-      value: "metrics",
-      figure: "img/website/metrics.png",
+      label: "APM",
+      value: "apm",
+      figure: "/img/landing/feature-apm.png",
       icon: "/img/landing/icon-placeholder.png",
       content: (
         <>
@@ -89,44 +29,99 @@ export const SigNozFeatures = () => {
               Out-of-box charts for application metrics like p90, p99 latency,
               error rates, request rates, etc.
             </li>
-            <li className="mb-2 text-lg"> Custom & Business Metrics </li>
             <li className="mb-2 text-lg">
-              A powerful metrics query builder to create customized charts
+              Monitor RED metrics for key operations in any service
             </li>
-            <li className="mb-2 text-lg">OpenTelemetry Metrics SDK support</li>
+            <li className="mb-2 text-lg">
+              Monitor database and external calls made by any service
+            </li>
+            <li className="mb-2 text-lg">
+              Service maps to show application topology
+            </li>
           </ul>
         </>
       ),
     },
     {
-      label: "Infrastructure Monitoring",
-      value: "infra",
-      figure: "img/website/infrastructure.png",
+      label: "Distributed Tracing",
+      value: "traces",
+      figure: "/img/landing/feature-distributed-tracing.png",
       icon: "/img/landing/icon-placeholder.png",
       content: (
         <>
           <ul>
             <li className="mb-2 text-lg">
-              End-to-End visibility into infrastructure performance
+              Get end-to-end visibility of your services with rich contextual
+              tags and attributes.
             </li>
             <li className="mb-2 text-lg">
-              Ingest metrics from all kinds of host environments
+              Run aggregates on trace data like sum, avg, p99 latency, etc.
             </li>
             <li className="mb-2 text-lg">
-              Correlate infrastructure and application metrics for contextual
-              insights
+              Group your trace data by different attributes like HTTP URL,
+              service names, etc. to find granular issues
             </li>
             <li className="mb-2 text-lg">
-              Build customized dashboards with powerful query builder
+              Flamegraphs and Gantt charts to visualize the flow of requests
+              easily.
             </li>
           </ul>
         </>
       ),
     },
     {
-      label: "Exceptions ",
+      label: "Metrics & Dashboards ",
+      value: "metrics",
+      figure: "/img/landing/feature-metrics-dashboards.png",
+      icon: "/img/landing/icon-placeholder.png",
+      content: (
+        <>
+          <ul>
+            <li className="mb-2 text-lg">
+              Monitor any metrics important to you.
+            </li>
+            <li className="mb-2 text-lg">
+              Support for OpenTelemetry metrics SDK or enable a Prometheus
+              receiver to receive any metrics exposed in a running Prometheus
+              instance.
+            </li>
+            <li className="mb-2 text-lg">
+              Create dashboards around any use case like external calls, API
+              endpoints, JVM metrics - there is no limit.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    // {
+    //   label: "Infrastructure Monitoring",
+    //   value: "infra",
+    //   figure: "img/website/infrastructure.png",
+    //   icon: "/img/landing/icon-placeholder.png",
+    //   content: (
+    //     <>
+    //       <ul>
+    //         <li className="mb-2 text-lg">
+    //           End-to-End visibility into infrastructure performance
+    //         </li>
+    //         <li className="mb-2 text-lg">
+    //           Ingest metrics from all kinds of host environments
+    //         </li>
+    //         <li className="mb-2 text-lg">
+    //           Correlate infrastructure and application metrics for contextual
+    //           insights
+    //         </li>
+    //         <li className="mb-2 text-lg">
+    //           Build customized dashboards with powerful query builder
+    //         </li>
+    //       </ul>
+    //     </>
+    //   ),
+    // },
+    {
+      label: "Exceptions Monitoring",
       value: "exceptions",
-      figure: "img/website/exceptions.png",
+      figure: "/img/landing/feature-exceptions-monitoring.png",
       icon: "/img/landing/icon-placeholder.png",
       content: (
         <>
@@ -143,8 +138,42 @@ export const SigNozFeatures = () => {
               Exceptions grouping and custom exceptions
             </li>
             <li className="mb-2 text-lg">
-              Navigate from Exceptions to related traces to observe the
-              exception in trace execution context
+              Navigate from Exceptions to related traces to see the error in
+              trace graph
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      label: "Logs Management ",
+      value: "logs",
+      figure: "/img/landing/feature-log-management.png",
+      icon: "/img/landing/icon-placeholder.png",
+      content: (
+        <>
+          <ul>
+            <li className="mb-2 text-lg">
+              Ingest, process, and analyze logs at any scale.
+            </li>
+            <li className="mb-2 text-lg">
+              Support for OpenTelemetry logs or any existing logging pipeline
+              that you have.
+            </li>
+            <li className="mb-2 text-lg">
+              Live tail, easy search, and a powerful logs query builder to give
+              you full control
+            </li>
+            <li className="mb-2 text-lg">
+              Use a columnar database to store logs which enables lightening
+              quick log analytics.
+              <br />
+              <a
+                target="_blank"
+                href="https://signoz.io/blog/logs-performance-benchmark/"
+              >
+                (Logs performance benchmark)
+              </a>
             </li>
           </ul>
         </>
@@ -153,7 +182,7 @@ export const SigNozFeatures = () => {
     {
       label: "Alerts ",
       value: "alerts",
-      figure: "img/website/alerts.png",
+      figure: "/img/landing/feature-alerts.png",
       icon: "/img/landing/icon-placeholder.png",
       content: (
         <>
@@ -213,7 +242,7 @@ export const SigNozFeatures = () => {
               </div>
             ))}
           </div>
-          <div className="bluish-gradient overflow-hidden rounded-lg">
+          <div className="rounded-lg">
             {FEATURES_LIST.map((feature, idx) => (
               <div
                 key={feature.label}
@@ -221,14 +250,22 @@ export const SigNozFeatures = () => {
                   tab === feature.value ? "" : "hidden"
                 }`}
               >
-                <div className="rounded-md overflow-hidden">
+                <div
+                  className={`
+                    rounded-md relative
+                    after:absolute after:content-[''] after:w-40 after:h-40 after:bottom-[0] after:left-[10%] after:bg-primary-500 after:rounded-full after:opacity-50 after:blur-3xl  
+                    before:absolute before:content-[''] before:w-28 before:h-28 before:top-[0] before:right-[10%] before:bg-bluish-400 before:rounded-full before:opacity-50 before:blur-3xl
+                  `}
+                >
                   <img
                     src={feature.figure}
                     alt={feature.label}
-                    className="h-full w-full object-cover rounded-xl"
+                    className="h-full w-full object-cover relative z-[1]"
                   />
                 </div>
-                <div className="px-16 py-10">{feature.content}</div>
+                <div className="px-16 py-10 flex justify-center items-center">
+                  {feature.content}
+                </div>
               </div>
             ))}
           </div>
@@ -239,15 +276,15 @@ export const SigNozFeatures = () => {
             {FEATURES_LIST.map((feature) => {
               return (
                 <div
-                  className={`feature-accordion ${
-                    tab === feature.value ? "bluish-gradient" : ""
-                  }`}
+                  className={`feature-accordion`}
                   key={feature.value}
                   id={`accordion-${feature.value}`}
                 >
                   <div
                     onClick={() => featureChangeHandler(feature.value)}
-                    className="cursor-pointer px-5 py-5 flex justify-between items-center"
+                    className={`cursor-pointer px-5 py-5 flex justify-between items-center ${
+                      tab === feature.value ? "bluish-gradient" : ""
+                    }`}
                   >
                     <div className="flex justify-center items-center gap-5">
                       <img
