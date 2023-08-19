@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SubHeading from "../../components/ui/SubHeading";
 import Hero from "../../components/ui/Hero";
 import Button from "../../components/ui/Button";

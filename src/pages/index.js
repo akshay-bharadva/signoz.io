@@ -256,10 +256,10 @@ function TrySignozModal(props) {
 
 const Statistics = () => {
   const STATS_LIST = [
-    { id: 1, name: "Downloads", value: "3.2M" },
+    { id: 1, name: "Downloads", value: "4M" },
     { id: 2, name: "GitHub Stars", value: "13.8k+" },
     { id: 3, name: "Contributors", value: "100+" },
-    { id: 4, name: "Community Members", value: "2.8k+" },
+    { id: 4, name: "Community Members", value: "3k+" },
   ];
   return (
     <section>
@@ -305,16 +305,16 @@ const Statistics = () => {
 const LatestInOpenTelementry = () => {
   const TUTORIALS_LIST = [
     {
-      youtubeId: "oQFMfEc9JNI",
-      desc: "Using an open source standard frees you from vendor lock-in.",
+      youtubeId: "Wzut0kjVeYI",
+      desc: "OpenTelemetry Webinars: Getting started with OpenTelemetry.",
     },
     {
-      youtubeId: "u2PiWKEdjCw",
-      desc: "Using an open source standard frees you from vendor lock-in.Using an open source standard frees you from vendor lock-in.Using an open source standard frees you from vendor lock-in.Using an open source standard frees you from vendor lock-in.",
+      youtubeId: "sL6XvOOAEP0",
+      desc: "Gathering data with the OpenTelemetry Collector.",
     },
     {
       youtubeId: "CgByZJeuRZY",
-      desc: "Using an open source standard frees you from vendor lock-in.",
+      desc: "Implementing Distributed Tracing in a NodeJS Application using OpenTelemetry",
     },
   ];
 
@@ -407,8 +407,8 @@ const BuildForDevelopers = () => {
       figure: "/img/landing/property-columnar-database.png",
     },
     {
-      title: "Data Pipelines",
-      desc: "Build data pipelines easily with SigNoz OTel Collector. Integrate any existing pipeline with OTel Collector to send data to SigNoz.",
+      title: "Telemetry Pipelines",
+      desc: "Build telemetry pipelines easily with SigNoz OTel Collector. Integrate any existing pipeline with OTel Collector to send data to SigNoz.",
       figure: "/img/landing/property-telemetry-pipeline.png",
     },
     {
