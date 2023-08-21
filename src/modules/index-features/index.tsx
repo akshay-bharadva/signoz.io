@@ -335,8 +335,8 @@ export const SigNozFeatures = () => {
 const DownArrow = () => {
   return (
     <svg
-      width="800px"
-      height="800px"
+      width="20px"
+      height="20px"
       viewBox="0 0 17 17"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
