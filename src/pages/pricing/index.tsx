@@ -1379,10 +1379,10 @@ function PricingCalculator() {
                     id="large-range"
                     type="range"
                     className="w-full h-3 slider"
-                    min={1}
+                    min={0}
                     max={100000}
                     value={logsGB}
-                    step={1}
+                    step={10}
                     onChange={(e) => setLogsGB(Number(e.target.value))}
                   />
                 </p>
@@ -1416,10 +1416,10 @@ function PricingCalculator() {
                     id="large-range"
                     type="range"
                     className="w-full h-3 slider"
-                    min={1}
+                    min={0}
                     max={100000}
                     value={tracesGB}
-                    step={1}
+                    step={10}
                     onChange={(e) => setTracesGB(Number(e.target.value))}
                   />
                 </p>
@@ -1430,7 +1430,7 @@ function PricingCalculator() {
                 </p>
                 <p className="col-span-2 flex gap-2 flex-nowrap justify-end items-center">
                   <span className="text-primary-400 text-lg md:text-xl font-extrabold whitespace-nowrap">
-                    {metricsGB} GB
+                    {metricsGB} mn samples
                   </span>
                   <span> for</span>
                   <select
@@ -1455,10 +1455,10 @@ function PricingCalculator() {
                     id="large-range"
                     type="range"
                     className="w-full h-3 slider"
-                    min={1}
+                    min={0}
                     max={100000}
                     value={metricsGB}
-                    step={1}
+                    step={10}
                     onChange={(e) => setMetricsGB(Number(e.target.value))}
                   />
                 </p>
