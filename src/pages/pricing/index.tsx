@@ -1350,6 +1350,11 @@ function PricingCalculator() {
         <div className="grid grid-cols-1 md:grid-cols-3 m-10 mx-2 md:m-10 gap-5">
           <div className="col-span-1 md:col-span-2">
             <div className="grid grid-cols-1 gap-y-8">
+            <div className="flex flex-col mb-5">
+              <Heading type={5}>Data ingested per month</Heading>
+              {/* <p>Data ingested per month</p> */}
+            </div>
+
               <div className="grid grid-cols-5">
                 <p className="col-span-3 flex justify-start items-center text-lg md:text-xl font-extrabold whitespace-nowrap">
                   Logs
@@ -1358,7 +1363,7 @@ function PricingCalculator() {
                   <span className="text-primary-400 text-lg md:text-xl font-extrabold whitespace-nowrap">
                     {logsGB} GB
                   </span>
-                  <span> for</span>
+                  <span> with </span>
                   <select
                     className="border text-sm rounded-lg block w-fit p-2.5 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 accent-primary-400"
                     value={logsRetentionPeriod}
@@ -1373,6 +1378,7 @@ function PricingCalculator() {
                       >{`${option.days} days`}</option>
                     ))}
                   </select>
+                  <span>retention</span>
                 </p>
                 <p className="col-span-5">
                   <input
@@ -1380,7 +1386,7 @@ function PricingCalculator() {
                     type="range"
                     className="w-full h-3 slider"
                     min={0}
-                    max={100000}
+                    max={30000}
                     value={logsGB}
                     step={10}
                     onChange={(e) => setLogsGB(Number(e.target.value))}
@@ -1395,7 +1401,7 @@ function PricingCalculator() {
                   <span className="text-primary-400 text-lg md:text-xl font-extrabold whitespace-nowrap">
                     {tracesGB} GB
                   </span>
-                  <span> for</span>
+                  <span> with </span>
                   <select
                     className="border text-sm rounded-lg block w-fit p-2.5 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 accent-primary-400"
                     value={tracesRetentionPeriod}
@@ -1410,6 +1416,7 @@ function PricingCalculator() {
                       >{`${option.days} days`}</option>
                     ))}
                   </select>
+                  <span>retention</span>
                 </p>
                 <p className="col-span-5">
                   <input
@@ -1417,7 +1424,7 @@ function PricingCalculator() {
                     type="range"
                     className="w-full h-3 slider"
                     min={0}
-                    max={100000}
+                    max={30000}
                     value={tracesGB}
                     step={10}
                     onChange={(e) => setTracesGB(Number(e.target.value))}
@@ -1432,7 +1439,7 @@ function PricingCalculator() {
                   <span className="text-primary-400 text-lg md:text-xl font-extrabold whitespace-nowrap">
                     {metricsGB} mn samples
                   </span>
-                  <span> for</span>
+                  <span> with </span>
                   <select
                     className="border text-sm rounded-lg block w-fit p-2.5 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 accent-primary-400"
                     value={metricsRetentionPeriod}
@@ -1449,6 +1456,7 @@ function PricingCalculator() {
                       }`}</option>
                     ))}
                   </select>
+                  <span>retention</span>
                 </p>
                 <p className="col-span-5">
                   <input
@@ -1469,7 +1477,7 @@ function PricingCalculator() {
             <span className="font-extrabold text-5xl md:leading-12 tracking-tight min-w-fit text-primary-400">
               ${new Intl.NumberFormat().format(amountToBePaid)}
             </span>
-            <span>SigNoz total price</span>
+            <span>SigNoz Total cost per month</span>
           </div>
         </div>
       </div>
